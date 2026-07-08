@@ -124,7 +124,7 @@ function AnimatedHeading() {
   };
 
   return (
-    <h1 className="mt-6 font-display text-[13vw] leading-[0.88] sm:mt-8 sm:text-[11vw] md:text-[6.4vw] lg:text-[6vw] xl:text-[5.6vw]">
+    <h1 className="mt-6 font-display text-[15vw] leading-[0.88] xs:text-[13vw] sm:mt-8 sm:text-[11vw] md:text-[7vw] lg:text-[6.2vw] xl:text-[5.6vw] 2xl:text-[80px]">
       <motion.span
         key={tick}
         className="block overflow-hidden"
@@ -168,11 +168,11 @@ function Hero() {
       {/* Floating rotating stamp */}
       <div
         aria-hidden
-        className="pointer-events-none absolute right-[26%] top-16 hidden animate-float md:block"
+        className="pointer-events-none absolute right-[5%] top-20 hidden animate-float lg:right-[26%] lg:block"
       >
-        <div className="relative grid h-28 w-28 place-items-center brut-border bg-mustard animate-wobble">
+        <div className="relative grid h-24 w-24 place-items-center brut-border bg-mustard animate-wobble lg:h-28 lg:w-28">
           <span className="animate-spin-slow font-display text-xs uppercase tracking-[0.2em]">
-            <svg viewBox="0 0 100 100" className="h-24 w-24">
+            <svg viewBox="0 0 100 100" className="h-20 w-20 lg:h-24 lg:w-24">
               <defs>
                 <path id="c" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0" />
               </defs>
@@ -181,22 +181,22 @@ function Hero() {
               </text>
             </svg>
           </span>
-          <Asterisk className="absolute h-6 w-6" />
+          <Asterisk className="absolute h-5 w-5 lg:h-6 lg:w-6" />
         </div>
       </div>
       <div className="mx-auto grid max-w-[1400px] grid-cols-12 gap-0 px-0">
 
-        {/* LEFT: label column */}
-        <aside className="relative col-span-12 hidden border-r-2 border-ink px-4 py-8 md:col-span-1 md:block md:px-2">
+        {/* LEFT: label column — decorative, hidden on small screens */}
+        <aside className="relative col-span-12 hidden border-r-2 border-ink px-2 py-8 md:col-span-1 md:block">
           <div className="mono sticky top-32 origin-top-left rotate-180 text-[10px] uppercase tracking-[0.3em] text-ink [writing-mode:vertical-rl]">
             IEEE·CS / Global Incubation Centre / File №001
           </div>
         </aside>
 
         {/* MAIN */}
-        <div className="col-span-12 border-b-2 border-ink px-4 pb-10 pt-14 sm:px-8 md:col-span-8 md:border-b-0 md:border-r-2 md:pt-20">
+        <div className="col-span-12 border-b-2 border-ink px-4 pb-10 pt-12 sm:px-8 sm:pt-16 md:col-span-8 md:border-b-0 md:border-r-2 md:pt-20">
           <Reveal>
-            <div className="mono flex flex-wrap items-center gap-3 text-[11px] uppercase tracking-widest">
+            <div className="mono flex flex-wrap items-center gap-2 text-[10px] uppercase tracking-widest sm:gap-3 sm:text-[11px]">
               <span className="brut-border bg-mustard px-2 py-1">№ 001</span>
               <span>Global Incubation Centre</span>
               <span className="text-muted-foreground">/ IEEE Computer Society</span>
@@ -206,22 +206,22 @@ function Hero() {
           <AnimatedHeading />
 
           <Reveal delay={0.16}>
-            <p className="mono mt-10 max-w-2xl border-l-4 border-ink pl-4 text-sm uppercase tracking-widest">
+            <p className="mono mt-8 max-w-2xl border-l-4 border-ink pl-4 text-[11px] uppercase tracking-widest sm:mt-10 sm:text-sm">
               Innovating Ideas / Empowering Entrepreneurs / Creating Global Impact
             </p>
           </Reveal>
 
           <Reveal delay={0.22}>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-8 flex flex-wrap items-center gap-3 sm:mt-10 sm:gap-4">
               <a
                 href="#apply"
-                className="brut-border brut-shadow brut-hover mono inline-flex items-center gap-2 bg-ink px-6 py-4 text-xs font-bold uppercase tracking-widest text-paper"
+                className="brut-border brut-shadow brut-hover mono inline-flex items-center gap-2 bg-ink px-5 py-3.5 text-xs font-bold uppercase tracking-widest text-paper sm:px-6 sm:py-4"
               >
                 Apply to Pitch <ArrowRight className="h-4 w-4" />
               </a>
               <a
                 href="#about"
-                className="brut-border brut-hover mono inline-flex items-center gap-2 bg-paper px-6 py-4 text-xs font-bold uppercase tracking-widest"
+                className="brut-border brut-hover mono inline-flex items-center gap-2 bg-paper px-5 py-3.5 text-xs font-bold uppercase tracking-widest sm:px-6 sm:py-4"
               >
                 Explore GIC <ArrowUpRight className="h-4 w-4" />
               </a>
@@ -229,7 +229,7 @@ function Hero() {
           </Reveal>
 
           <Reveal delay={0.3}>
-            <div className="mt-14 grid max-w-2xl grid-cols-3 border-2 border-ink">
+            <div className="mt-10 grid max-w-sm grid-cols-3 border-2 border-ink sm:max-w-2xl sm:mt-14">
               {[
                 ["50+", "Mentors"],
                 ["30+", "Partners"],
@@ -239,8 +239,8 @@ function Hero() {
                   key={l}
                   className={`px-3 py-4 sm:px-4 sm:py-5 ${i < 2 ? "border-r-2 border-ink" : ""}`}
                 >
-                  <div className="font-display text-2xl sm:text-4xl">{n}</div>
-                  <div className="mono mt-1 text-[9px] uppercase tracking-widest text-muted-foreground sm:text-[10px]">
+                  <div className="font-display text-xl sm:text-2xl md:text-4xl">{n}</div>
+                  <div className="mono mt-1 text-[8px] uppercase tracking-widest text-muted-foreground sm:text-[9px] md:text-[10px]">
                     {l}
                   </div>
                 </div>
@@ -249,8 +249,8 @@ function Hero() {
           </Reveal>
         </div>
 
-        {/* RIGHT: index card */}
-        <div className="col-span-12 flex flex-col md:col-span-3">
+        {/* RIGHT: index card — hidden on mobile, shown as sidebar on md+ */}
+        <div className="col-span-12 flex flex-col border-t-2 border-ink md:col-span-3 md:border-t-0">
           <div className="border-b-2 border-ink bg-ink px-4 py-3 sm:px-6">
             <span className="mono text-[10px] uppercase tracking-widest text-paper">
               Index / Contents
@@ -275,7 +275,7 @@ function Hero() {
             ].map((t, i) => (
               <li
                 key={t}
-                className="mono flex items-center justify-between gap-3 border-b border-ink/30 px-4 py-3 text-[11px] uppercase tracking-widest last:border-0 sm:px-6"
+                className="mono flex items-center justify-between gap-3 border-b border-ink/30 px-4 py-2.5 text-[10px] uppercase tracking-widest last:border-0 sm:px-6 sm:py-3 sm:text-[11px]"
               >
                 <span className="text-muted-foreground">
                   {String(i + 1).padStart(2, "0")}
@@ -394,23 +394,35 @@ function About() {
           <span className="text-muted-foreground">01 → 08</span>
         </div>
         <div className="grid grid-cols-1 gap-0 border-2 border-ink sm:grid-cols-2 lg:grid-cols-4">
-          {objectives.map(([t, d], i) => (
-            <Reveal key={t} delay={(i % 4) * 0.05}>
-              <div
-                className={`h-full p-5 sm:p-6 ${
-                  (i + 1) % 4 !== 0 ? "lg:border-r-2 lg:border-ink" : ""
-                } ${i % 2 === 0 ? "sm:border-r-2 sm:border-ink lg:border-r-2" : ""} ${
-                  i < objectives.length - (objectives.length % 4 || 4) ? "border-b-2 border-ink" : ""
-                }`}
-              >
-                <div className="mono text-[10px] uppercase tracking-widest text-brick">
-                  Obj / {String(i + 1).padStart(2, "0")}
+          {objectives.map(([t, d], i) => {
+            const isLastCol_lg = (i + 1) % 4 === 0;
+            const isLastCol_sm = i % 2 !== 0;
+            const isLastRow_lg = i >= 4;
+            const isLastRow_sm = i >= 6;
+            return (
+              <Reveal key={t} delay={(i % 4) * 0.05}>
+                <div
+                  className={[
+                    "h-full p-5 sm:p-6",
+                    /* right borders */
+                    !isLastCol_sm ? "border-b-2 border-ink sm:border-b-0 sm:border-r-2" : "border-b-2 border-ink",
+                    !isLastCol_lg ? "lg:border-r-2" : "lg:border-r-0",
+                    /* bottom borders */
+                    !isLastRow_sm ? "sm:border-b-2" : "sm:border-b-0",
+                    !isLastRow_lg ? "lg:border-b-2" : "lg:border-b-0",
+                    /* last item overall — no bottom border */
+                    i === objectives.length - 1 ? "border-b-0" : "",
+                  ].join(" ")}
+                >
+                  <div className="mono text-[10px] uppercase tracking-widest text-brick">
+                    Obj / {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <div className="mt-2 font-display text-base sm:text-lg">{t}</div>
+                  <div className="mt-3 text-sm leading-relaxed text-muted-foreground">{d}</div>
                 </div>
-                <div className="mt-2 font-display text-base sm:text-lg">{t}</div>
-                <div className="mt-3 text-sm leading-relaxed text-muted-foreground">{d}</div>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            );
+          })}
         </div>
       </div>
 
@@ -467,26 +479,37 @@ function Principles() {
   return (
     <Section id="principles" number="02" eyebrow="Core Principles" title="The rules of the house.">
       <div className="grid grid-cols-1 border-2 border-ink sm:grid-cols-2 lg:grid-cols-4">
-        {items.map((it, i) => (
-          <Reveal key={it.t} delay={(i % 4) * 0.05}>
-            <div
-              className={`group relative h-full bg-paper p-6 transition-colors hover:bg-mustard ${
-                (i + 1) % 4 !== 0 ? "lg:border-r-2 lg:border-ink" : ""
-              } ${i % 2 === 0 ? "sm:border-r-2 sm:border-ink lg:border-r-2" : ""} ${
-                i < items.length - 4 ? "border-b-2 border-ink lg:border-b-2" : "sm:border-b-2 lg:border-b-0"
-              } ${i < 6 ? "border-b-2 sm:border-b-2 border-ink" : ""}`}
-            >
-              <div className="mono text-[10px] uppercase tracking-widest text-brick">
-                Rule / {String(i + 1).padStart(2, "0")}
+        {items.map((it, i) => {
+          const isLastCol_lg = (i + 1) % 4 === 0;
+          const isLastCol_sm = i % 2 !== 0;
+          const isLastRow_lg = i >= 4;
+          const isLastRow_sm = i >= 6;
+          return (
+            <Reveal key={it.t} delay={(i % 4) * 0.05}>
+              <div
+                className={[
+                  "group relative h-full bg-paper p-6 transition-colors hover:bg-mustard",
+                  /* right borders */
+                  !isLastCol_sm ? "border-b-2 border-ink sm:border-b-0 sm:border-r-2" : "border-b-2 border-ink",
+                  !isLastCol_lg ? "lg:border-r-2" : "lg:border-r-0",
+                  /* bottom borders */
+                  !isLastRow_sm ? "sm:border-b-2" : "sm:border-b-0",
+                  !isLastRow_lg ? "lg:border-b-2" : "lg:border-b-0",
+                  i === items.length - 1 ? "border-b-0" : "",
+                ].join(" ")}
+              >
+                <div className="mono text-[10px] uppercase tracking-widest text-brick">
+                  Rule / {String(i + 1).padStart(2, "0")}
+                </div>
+                <div className="mt-4 grid h-10 w-10 place-items-center border-2 border-ink bg-paper">
+                  <it.icon className="h-4 w-4" />
+                </div>
+                <div className="mt-5 font-display text-lg">{it.t}</div>
+                <div className="mt-3 text-sm leading-relaxed text-muted-foreground">{it.d}</div>
               </div>
-              <div className="mt-4 grid h-10 w-10 place-items-center border-2 border-ink bg-paper">
-                <it.icon className="h-4 w-4" />
-              </div>
-              <div className="mt-5 font-display text-lg">{it.t}</div>
-              <div className="mt-3 text-sm leading-relaxed text-muted-foreground">{it.d}</div>
-            </div>
-          </Reveal>
-        ))}
+            </Reveal>
+          );
+        })}
       </div>
     </Section>
   );
@@ -591,17 +614,22 @@ function WhyJoin() {
       <div className="brut-border divide-y-2 divide-ink bg-paper">
         {items.map((it, i) => (
           <Reveal key={it.t} delay={(i % 8) * 0.03}>
-            <div className="group grid grid-cols-12 items-start gap-4 p-5 transition-colors hover:bg-ink hover:text-paper sm:p-6">
-              <div className="mono col-span-2 text-xs uppercase tracking-widest sm:col-span-1">
-                {String(i + 1).padStart(2, "0")}
+            <div className="group p-5 transition-colors hover:bg-ink hover:text-paper sm:p-6">
+              <div className="flex items-start gap-4">
+                <div className="mono shrink-0 text-xs uppercase tracking-widest">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="font-display text-lg sm:text-2xl">{it.t}</div>
+                  <div className="mt-2 text-sm leading-relaxed text-muted-foreground group-hover:text-paper/70 sm:mt-0 sm:hidden">
+                    {it.d}
+                  </div>
+                </div>
+                <div className="hidden text-sm leading-relaxed text-muted-foreground group-hover:text-paper/70 sm:block sm:max-w-[280px] sm:shrink-0 md:max-w-xs lg:max-w-sm">
+                  {it.d}
+                </div>
+                <ArrowUpRight className="hidden h-5 w-5 shrink-0 sm:block" />
               </div>
-              <div className="col-span-10 sm:col-span-6">
-                <div className="font-display text-lg sm:text-2xl">{it.t}</div>
-              </div>
-              <div className="col-span-12 text-sm leading-relaxed text-muted-foreground group-hover:text-paper/70 sm:col-span-4 sm:col-start-8">
-                {it.d}
-              </div>
-              <ArrowUpRight className="col-span-1 hidden h-5 w-5 justify-self-end sm:block" />
             </div>
           </Reveal>
         ))}
@@ -652,10 +680,10 @@ function Journey() {
     <div
       ref={containerRef}
       id="journey"
-      className="relative h-[220vh] border-b-2 border-ink sm:h-[260vh]"
+      className="relative h-[240vh] border-b-2 border-ink sm:h-[280vh]"
     >
       <div className="sticky top-0 flex h-screen flex-col overflow-hidden bg-paper">
-        <div className="mx-auto grid w-full max-w-[1400px] grid-cols-12 gap-4 px-4 pt-14 sm:px-6 sm:pt-20">
+        <div className="mx-auto grid w-full max-w-[1400px] grid-cols-12 gap-4 px-4 pt-12 sm:px-6 sm:pt-16 md:pt-20">
           <div className="col-span-12 md:col-span-3">
             <div className="mono text-[10px] uppercase tracking-widest text-muted-foreground">
               Section / 06
@@ -665,27 +693,27 @@ function Journey() {
             </div>
           </div>
           <div className="col-span-12 md:col-span-9">
-            <h2 className="font-display text-2xl leading-[0.95] sm:text-4xl lg:text-5xl">
+            <h2 className="font-display text-2xl leading-[0.95] sm:text-3xl lg:text-5xl">
               A structured pathway, from spark to global scale.
             </h2>
-            <p className="mono mt-3 max-w-3xl border-l-4 border-ink pl-4 text-xs uppercase tracking-widest sm:mt-4 sm:text-sm">
+            <p className="mono mt-3 max-w-3xl border-l-4 border-ink pl-4 text-[11px] uppercase tracking-widest sm:text-xs md:mt-4">
               Every startup follows a structured pathway supported by domain experts, industry
               mentors, researchers, and strategic partners.
             </p>
           </div>
         </div>
 
-        <div ref={viewportRef} className="relative mt-6 flex-1 overflow-hidden sm:mt-8">
+        <div ref={viewportRef} className="relative mt-5 flex-1 overflow-hidden sm:mt-7">
           <motion.div ref={trackRef} style={{ x }} className="flex h-full items-center px-4 sm:px-6">
             {stages.map((s, i) => {
               const Icon = s.icon;
               return (
                 <div
                   key={s.title}
-                  className="relative mr-4 flex h-[260px] w-[72vw] shrink-0 flex-col border-2 border-ink bg-paper p-4 last:mr-0 sm:mr-5 sm:h-[300px] sm:w-[44vw] sm:p-5 md:w-[30vw] lg:w-[22vw]"
+                  className="relative mr-3 flex h-[240px] w-[80vw] shrink-0 flex-col border-2 border-ink bg-paper p-4 last:mr-0 sm:mr-4 sm:h-[280px] sm:w-[50vw] md:w-[34vw] lg:w-[24vw] xl:w-[20vw]"
                 >
                   <div className="h-1.5 w-full bg-brick" />
-                  <div className="mt-4 flex items-start justify-between">
+                  <div className="mt-3 flex items-start justify-between sm:mt-4">
                     <div className="mono text-[10px] uppercase tracking-widest text-brick">
                       Stage / {String(i + 1).padStart(2, "0")}
                     </div>
@@ -694,14 +722,14 @@ function Journey() {
                     </div>
                   </div>
                   <div className="relative z-10 mt-3">
-                    <div className="font-display text-2xl leading-[0.95] sm:text-3xl">
+                    <div className="font-display text-xl leading-[0.95] sm:text-2xl lg:text-3xl">
                       {s.title}
                     </div>
-                    <div className="mono mt-2 text-[11px] uppercase tracking-widest text-muted-foreground sm:text-xs">
+                    <div className="mono mt-2 text-[10px] uppercase tracking-widest text-muted-foreground sm:text-[11px]">
                       {s.note}
                     </div>
                   </div>
-                  <div className="absolute bottom-4 right-4 font-display text-6xl leading-none text-ink/[0.08] sm:text-8xl">
+                  <div className="absolute bottom-4 right-4 font-display text-5xl leading-none text-ink/[0.08] sm:text-7xl">
                     {String(i + 1).padStart(2, "0")}
                   </div>
                   <div className="mt-auto flex items-center justify-between border-t-2 border-ink pt-3">
@@ -802,39 +830,50 @@ function Apply() {
   return (
     <Section id="apply" number="08" eyebrow="Startup Pitch" title="Apply. Pitch. Get incubated.">
       <div className="grid grid-cols-1 gap-0 border-2 border-ink md:grid-cols-2 lg:grid-cols-4">
-        {cols.map((c, i) => (
-          <Reveal key={c.title} delay={i * 0.06}>
-            <div
-              className={`h-full bg-paper p-6 sm:p-7 ${
-                i < 3 ? "border-b-2 border-ink lg:border-b-0 lg:border-r-2" : ""
-              } ${i % 2 === 0 ? "md:border-r-2 md:border-ink" : ""} ${
-                i < 2 ? "md:border-b-2" : ""
-              }`}
-            >
-              <div className="flex items-center gap-3">
-                <div className="grid h-10 w-10 place-items-center border-2 border-ink bg-mustard">
-                  <c.icon className="h-4 w-4" />
+        {cols.map((c, i) => {
+          const isLastCol_md = i % 2 !== 0;
+          const isLastCol_lg = i === 3;
+          const isLastRow_md = i >= 2;
+          return (
+            <Reveal key={c.title} delay={i * 0.06}>
+              <div
+                className={[
+                  "h-full bg-paper p-6 sm:p-7",
+                  /* mobile: all have bottom border except last */
+                  i < 3 ? "border-b-2 border-ink" : "",
+                  /* md: 2-col grid */
+                  !isLastCol_md ? "md:border-r-2 md:border-ink" : "",
+                  !isLastRow_md ? "md:border-b-2" : "md:border-b-0",
+                  /* lg: 4-col grid — override */
+                  "lg:border-b-0",
+                  !isLastCol_lg ? "lg:border-r-2" : "lg:border-r-0",
+                ].join(" ")}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="grid h-10 w-10 place-items-center border-2 border-ink bg-mustard">
+                    <c.icon className="h-4 w-4" />
+                  </div>
+                  <div className="mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                    Step / {String(i + 1).padStart(2, "0")}
+                  </div>
                 </div>
-                <div className="mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                  Step / {String(i + 1).padStart(2, "0")}
-                </div>
+                <h3 className="mt-5 font-display text-xl">{c.title}</h3>
+                <ul className="mt-4 space-y-2.5">
+                  {c.items.map((it) => (
+                    <li key={it} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brick" />
+                      <span>{it}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="mt-5 font-display text-xl">{c.title}</h3>
-              <ul className="mt-4 space-y-2.5">
-                {c.items.map((it) => (
-                  <li key={it} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brick" />
-                    <span>{it}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
-        ))}
+            </Reveal>
+          );
+        })}
       </div>
 
       <Reveal delay={0.15}>
-        <div className="brut-border brut-shadow mt-8 flex flex-wrap items-center justify-between gap-4 bg-brick p-6 text-paper sm:p-8">
+        <div className="brut-border brut-shadow mt-8 flex flex-col gap-5 bg-brick p-6 text-paper sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-8">
           <div>
             <div className="font-display text-2xl sm:text-3xl">Ready to pitch your startup?</div>
             <div className="mono mt-2 text-xs uppercase tracking-widest">
@@ -843,7 +882,7 @@ function Apply() {
           </div>
           <a
             href="#contact"
-            className="brut-border mono inline-flex items-center gap-2 bg-paper px-6 py-3 text-xs font-bold uppercase tracking-widest text-ink"
+            className="brut-border mono inline-flex w-full items-center justify-center gap-2 bg-paper px-6 py-3.5 text-xs font-bold uppercase tracking-widest text-ink sm:w-auto sm:py-3"
           >
             Apply Now <ArrowRight className="h-4 w-4" />
           </a>
@@ -1156,9 +1195,9 @@ function Field({ label, name, type = "text", placeholder }: { label: string; nam
 function Footer() {
   return (
     <footer className="border-t-2 border-ink bg-ink text-paper">
-      <div className="mx-auto max-w-[1400px] px-4 py-14 sm:px-6">
-        <div className="grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+      <div className="mx-auto max-w-[1400px] px-4 py-12 sm:px-6 sm:py-16">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12">
+          <div className="sm:col-span-2 lg:col-span-5">
             <div className="flex items-center gap-3">
               <div className="grid h-10 w-10 shrink-0 place-items-center border-2 border-paper bg-mustard text-ink mono text-sm font-bold">
                 G/
@@ -1170,7 +1209,7 @@ function Footer() {
                 </div>
               </div>
             </div>
-            <p className="mono mt-6 max-w-md text-sm uppercase leading-relaxed tracking-widest text-paper/70">
+            <p className="mono mt-6 max-w-md text-xs uppercase leading-relaxed tracking-widest text-paper/70 sm:text-sm">
               Innovating Ideas / Empowering Entrepreneurs / Creating Global Impact.
             </p>
           </div>
@@ -1178,9 +1217,9 @@ function Footer() {
           <FooterCol title="Program" links={["Apply", "Mentors", "Partners", "Success Stories"]} />
           <FooterCol title="Company" links={["Contact", "Privacy Policy", "Terms", "IEEE.org"]} />
         </div>
-        <div className="mono mt-14 flex flex-col items-start justify-between gap-3 border-t-2 border-paper/20 pt-6 text-[10px] uppercase tracking-widest text-paper/60 sm:flex-row sm:items-center">
+        <div className="mono mt-12 flex flex-col items-start justify-between gap-3 border-t-2 border-paper/20 pt-6 text-[10px] uppercase tracking-widest text-paper/60 sm:mt-14 sm:flex-row sm:items-center">
           <div>© 2026 GIC · IEEE Computer Society. All rights reserved.</div>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
             <a href="#" className="hover:text-paper">Privacy</a>
             <a href="#" className="hover:text-paper">Terms</a>
             <a href="#" className="hover:text-paper">Code of Conduct</a>
@@ -1222,9 +1261,9 @@ function Section({
 }) {
   return (
     <section id={id} className="border-b-2 border-ink">
-      <div className="mx-auto max-w-[1400px] px-4 py-16 sm:px-6 sm:py-24">
+      <div className="mx-auto max-w-[1400px] px-4 py-14 sm:px-6 sm:py-20 lg:py-24">
         <Reveal>
-          <div className="mb-10 grid grid-cols-12 gap-4 items-end sm:mb-16">
+          <div className="mb-10 grid grid-cols-12 items-end gap-4 sm:mb-14 lg:mb-16">
             <div className="col-span-12 md:col-span-3">
               <div className="mono text-[10px] uppercase tracking-widest text-muted-foreground">
                 Section / {number}
@@ -1233,7 +1272,7 @@ function Section({
                 <span className="brut-border bg-mustard px-2 py-1">{eyebrow}</span>
               </div>
             </div>
-            <h2 className="col-span-12 font-display text-3xl leading-[0.95] sm:text-5xl md:col-span-9 lg:text-6xl">
+            <h2 className="col-span-12 font-display text-3xl leading-[0.95] sm:text-4xl md:col-span-9 lg:text-5xl xl:text-6xl">
               {title}
             </h2>
           </div>
