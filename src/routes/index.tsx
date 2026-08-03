@@ -1305,6 +1305,14 @@ function Footer() {
             <a href="#" className="hover:text-paper">Privacy</a>
             <a href="#" className="hover:text-paper">Terms</a>
             <a href="#" className="hover:text-paper">Code of Conduct</a>
+            <div className="flex items-center gap-2">
+              <a href="/robots.txt" target="_blank" className="brut-border inline-flex items-center justify-center bg-paper px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-ink hover:bg-mustard">
+                Robots.txt
+              </a>
+              <a href="/llms.txt" target="_blank" className="brut-border inline-flex items-center justify-center bg-paper px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-ink hover:bg-mustard">
+                LLMs.txt
+              </a>
+            </div>
           </div>
         </div>
       </div>

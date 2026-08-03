@@ -92,8 +92,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Global Incubation Centre (GIC) — IEEE Computer Society" },
       { name: "twitter:description", content: "The Global Incubation Centre by IEEE Computer Society — empowering innovators, accelerating startups, and building the future. Launching at AICSSYC 2026." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9811a95e-607a-4a7e-bdd7-8cc37c689a95/id-preview-6a71812c--d62ad914-b06a-46c9-a1c6-4f6d1287c08f.lovable.app-1783542620274.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9811a95e-607a-4a7e-bdd7-8cc37c689a95/id-preview-6a71812c--d62ad914-b06a-46c9-a1c6-4f6d1287c08f.lovable.app-1783542620274.png" },
+      { property: "og:image", content: "/og-image.jpg" },
+      { name: "twitter:image", content: "/og-image.jpg" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
