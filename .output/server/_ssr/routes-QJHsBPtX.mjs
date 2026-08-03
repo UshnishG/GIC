@@ -3,7 +3,7 @@ import { i as AnimatePresence, n as useScroll, t as useTransform } from "../_lib
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { t as motion } from "../_libs/motion.mjs";
 import { A as ArrowUpRight, C as Earth, D as Briefcase, E as Calendar, O as BadgeCheck, S as FlaskConical, T as CircleCheck, _ as Linkedin, a as TrendingUp, b as Handshake, c as ShieldCheck, d as Plus, f as Network, g as Mail, h as MapPin, i as Twitter, j as ArrowRight, k as Asterisk, l as Scale, m as Menu, n as Wallet, o as Target, p as Minus, r as Users, s as Sparkles, t as X, u as Rocket, v as Lightbulb, w as Cpu, x as Github, y as Layers } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-CRhrrfvE.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-QJHsBPtX.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var variants = {
@@ -230,6 +230,7 @@ function Index() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Hero, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Marquee, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(About, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Different, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Principles, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Offerings, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(WhoCanApply, {}),
@@ -415,7 +416,7 @@ function Hero() {
 								delay: .16,
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 									className: "mono mt-8 max-w-2xl border-l-4 border-ink pl-4 text-[11px] uppercase tracking-widest sm:mt-10 sm:text-sm",
-									children: "Innovating Ideas / Empowering Entrepreneurs / Creating Global Impact"
+									children: "Social enterprise incubation ecosystem / Solving real problems for the 70–80% of the world's population"
 								})
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, {
@@ -438,8 +439,8 @@ function Hero() {
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "mt-10 grid max-w-sm grid-cols-3 border-2 border-ink sm:max-w-2xl sm:mt-14",
 									children: [
-										["50+", "Mentors"],
-										["30+", "Partners"],
+										["100%", "Social Impact"],
+										["Hardware", "+ Software"],
 										["∞", "Ambition"]
 									].map(([n, l], i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 										className: `px-3 py-4 sm:px-4 sm:py-5 ${i < 2 ? "border-r-2 border-ink" : ""}`,
@@ -468,7 +469,8 @@ function Hero() {
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ol", {
 								className: "flex-1",
 								children: [
-									"About",
+									"About GIC",
+									"What Makes GIC Different",
 									"Core Principles",
 									"What We Offer",
 									"Who Can Apply",
@@ -548,20 +550,17 @@ function Marquee() {
 }
 function About() {
 	const objectives = [
-		["Foster Innovation", "Encourage the development of innovative products, technologies, and solutions addressing real-world challenges."],
-		["Support Entrepreneurs", "Provide structured mentorship, technical guidance, and training to help founders build sustainable ventures."],
-		["Accelerate Startup Growth", "Incubation programs from idea validation through product development, market readiness, and scaling."],
-		["Bridge Academia & Industry", "Facilitate collaboration among universities, researchers, corporations, and startups."],
-		["Enable Global Collaboration", "International partnerships giving startups access to global markets, expertise, and opportunities."],
-		["Promote Commercialization", "Transform academic research and technological innovations into commercially viable products."],
-		["Connect with Investors", "Engage with investors, VC firms, angel networks, and strategic partners."],
-		["Build a Sustainable Ecosystem", "Cultivate innovation, collaboration, ethics, and long-term impact across the founder journey."]
+		["Foster Innovation", "Encourage the development of innovative hardware, software, and hybrid solutions addressing real-world challenges for marginalised populations."],
+		["Support Entrepreneurs, Fully", "Provide structured mentorship and technical guidance that continues past the prototype stage, into company-building."],
+		["Accelerate Startup Growth", "Offer incubation from idea validation through product development, market readiness, and scaling."],
+		["Bridge Academia and Industry", "Facilitate collaboration among universities, researchers, corporations, government bodies, and startups."],
+		["Enable Global Collaboration", "Build international partnerships that give startups access to global markets, expertise, and networks."]
 	];
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Section, {
 		id: "about",
 		number: "01",
 		eyebrow: "About / File №001",
-		title: "Where transformative ideas become global ventures.",
+		title: "Most incubation centres stop the moment an idea becomes a prototype. GIC doesn't.",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "grid grid-cols-12 gap-4 lg:gap-6",
@@ -569,20 +568,27 @@ function About() {
 					className: "col-span-12 lg:col-span-8",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "brut-border bg-paper p-6 sm:p-8",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-							className: "text-lg leading-relaxed sm:text-xl",
-							children: [
-								"The ",
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Global Incubation Centre (GIC)" }),
-								" is an initiative of the",
-								" ",
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "IEEE Computer Society" }),
-								", established to nurture the next generation of innovators, entrepreneurs, researchers, and technology leaders. It serves as a collaborative ecosystem where transformative ideas evolve into scalable products and globally competitive ventures."
-							]
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg",
-							children: "Whether you are a student with a breakthrough concept, a researcher developing cutting-edge technology, or an entrepreneur building the next disruptive startup — GIC provides the platform to accelerate your journey."
-						})]
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+								className: "text-lg leading-relaxed sm:text-xl",
+								children: [
+									"The ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Global Incubation Centre (GIC)" }),
+									" is an initiative of the",
+									" ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "IEEE Computer Society" }),
+									", built as a social enterprise incubation ecosystem dedicated to solving real problems for the 70–80% of the world's population who are typically underserved by mainstream innovation — marginalised communities, underserved regions, and overlooked markets."
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg",
+								children: "GIC exists to close two gaps at once: the gap between research and real-world impact, and the gap between prototype and startup — the exact point where most founders are left to fend for themselves. We stay with founders through both."
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg",
+								children: "Whether the solution is a hardware device, a software platform, or a hardware + software system, GIC provides the mentorship, technical guidance, and structured support to take it from a bold idea to a sustainable, scalable venture with genuine social impact."
+							})
+						]
 					})
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, {
 					delay: .08,
@@ -590,13 +596,13 @@ function About() {
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "grid h-full grid-rows-2 gap-4 lg:gap-6",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(StatCard, {
-							label: "Founded",
-							value: "2026",
-							note: "Under IEEE·CS charter"
+							label: "Target",
+							value: "70-80%",
+							note: "Of the world's population"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StatCard, {
 							label: "Scope",
 							value: "Global",
-							note: "Remote-first, borderless",
+							note: "Hardware & Software",
 							accent: true
 						})]
 					})
@@ -605,21 +611,53 @@ function About() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "mt-6 grid grid-cols-12 gap-4 lg:gap-6",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, {
-					className: "col-span-12 md:col-span-6",
+					className: "col-span-12 lg:col-span-4",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BigCard, {
 						tag: "Vision",
 						icon: Target,
 						accent: "cobalt",
-						children: "To become a globally recognized incubation ecosystem that empowers innovators to develop transformative technologies, build sustainable enterprises, and create meaningful societal impact."
+						children: "To become a globally recognized social enterprise incubation ecosystem that empowers innovators to build technologies and startups that create meaningful, lasting change for the majority of the world's population — not just its most privileged segment."
 					})
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, {
 					delay: .08,
-					className: "col-span-12 md:col-span-6",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BigCard, {
-						tag: "Mission",
-						icon: Rocket,
-						accent: "brick",
-						children: "Foster innovation-driven entrepreneurship, support early-stage startups through structured incubation, connect innovators with mentors, industry experts, investors, and academic leaders — and accelerate the commercialization of research and emerging technologies."
+					className: "col-span-12 lg:col-span-8",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "brut-border brut-shadow-brick h-full bg-paper p-6 sm:p-8",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center justify-between",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "mono text-[10px] uppercase tracking-widest text-brick",
+									children: "Mission"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "grid h-10 w-10 place-items-center border-2 border-ink bg-ink text-paper",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Rocket, { className: "h-4 w-4" })
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "mt-6 font-display text-2xl sm:text-3xl",
+								children: "Mission"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+								className: "mt-4 space-y-4",
+								children: [
+									"Foster innovation-driven, socially conscious entrepreneurship.",
+									"Support early-stage startups through structured, end-to-end incubation — from idea to prototype, and from prototype to startup.",
+									"Connect innovators with mentors, industry experts, investors, and academic leaders who stay engaged through every stage.",
+									"Accelerate the commercialization of research and emerging technologies, with priority given to solutions serving marginalised and underserved populations.",
+									"Build an inclusive global community of entrepreneurs, researchers, and technology professionals working across hardware, software, and hybrid systems."
+								].map((m, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+									className: "flex items-start gap-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "mono mt-1 shrink-0 text-xs text-brick",
+										children: ["0", i + 1]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "text-base leading-relaxed text-muted-foreground sm:text-lg",
+										children: m
+									})]
+								}, i))
+							})
+						]
 					})
 				})]
 			}),
@@ -635,18 +673,18 @@ function About() {
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-px flex-1 bg-ink" }),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							className: "text-muted-foreground",
-							children: "01 → 08"
+							children: "01 → 05"
 						})
 					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "grid grid-cols-1 gap-0 border-2 border-ink sm:grid-cols-2 lg:grid-cols-4",
+					className: "grid grid-cols-1 gap-0 border-2 border-ink sm:grid-cols-2 lg:grid-cols-3",
 					children: objectives.map(([t, d], i) => {
-						const isLastCol_lg = (i + 1) % 4 === 0;
+						const isLastCol_lg = (i + 1) % 3 === 0;
 						const isLastCol_sm = i % 2 !== 0;
-						const isLastRow_lg = i >= 4;
-						const isLastRow_sm = i >= 6;
+						const isLastRow_lg = i >= 3;
+						const isLastRow_sm = i >= 4;
 						return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, {
-							delay: i % 4 * .05,
+							delay: i % 3 * .05,
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: [
 									"h-full p-5 sm:p-6",
@@ -738,43 +776,43 @@ function Principles() {
 	const items = [
 		{
 			icon: Lightbulb,
-			t: "Innovation First",
-			d: "Every transformative venture begins with bold ideas supported by rigorous innovation."
+			t: "Impact First",
+			d: "Every venture we support must move the needle for the people it's built for."
 		},
 		{
 			icon: Rocket,
 			t: "Entrepreneur-Centric",
-			d: "Our programs are designed around the needs, aspirations, and growth of founders."
+			d: "Our support doesn't end at the prototype; it's designed around the founder's full journey."
 		},
 		{
 			icon: Earth,
 			t: "Global Perspective",
-			d: "Innovation transcends borders. We encourage international collaboration and market access."
+			d: "Innovation transcends borders; we encourage international collaboration and market access."
 		},
 		{
 			icon: Handshake,
-			t: "Collaboration > Competition",
-			d: "Meaningful innovation flourishes through multidisciplinary collaboration and shared expertise."
+			t: "Collaboration Over Competition",
+			d: "Meaningful innovation flourishes through multidisciplinary collaboration."
 		},
 		{
 			icon: ShieldCheck,
 			t: "Integrity & Ethics",
-			d: "Guided by transparency, fairness, accountability, and ethical technology development."
+			d: "Every initiative is guided by transparency, fairness, and accountability."
 		},
 		{
 			icon: Users,
 			t: "Inclusivity",
-			d: "Innovators from diverse backgrounds and disciplines — equal opportunities for all."
+			d: "We welcome innovators from diverse backgrounds, disciplines, and communities."
 		},
 		{
 			icon: Sparkles,
 			t: "Continuous Learning",
-			d: "Entrepreneurship is a journey of lifelong learning, adaptation, and resilience."
+			d: "Entrepreneurship is a journey of lifelong learning and resilience."
 		},
 		{
 			icon: TrendingUp,
 			t: "Sustainable Impact",
-			d: "Ventures that create lasting economic, technological, environmental, and societal value."
+			d: "We back ventures that create lasting economic, technological, environmental, and societal value."
 		}
 	];
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
@@ -831,13 +869,13 @@ function Offerings() {
 		eyebrow: "What GIC Offers",
 		title: "A full stack for the modern founder.",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3",
+			className: "grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3",
 			children: [
-				"Structured Startup Incubation",
+				"Structured Startup Incubation (idea → prototype → startup)",
 				"Business Strategy Development",
-				"Expert Mentorship",
+				"Expert Mentorship through prototyping and company-building",
 				"Investor Readiness Programs",
-				"Technical Consultation",
+				"Technical Consultation across hardware, software, & hybrid systems",
 				"Startup Pitch Opportunities",
 				"Product Validation",
 				"Networking with Global Experts",
@@ -846,25 +884,24 @@ function Offerings() {
 				"Industry Collaboration",
 				"Workshops and Bootcamps",
 				"Intellectual Property Guidance",
-				"Demo Days & Showcase Events",
-				"International Collaboration"
+				"Demo Days and Showcase Events"
 			].map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, {
 				delay: i % 3 * .03,
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "brut-border brut-hover flex items-center gap-4 bg-paper p-4",
+					className: "brut-border brut-hover flex h-full items-center gap-4 bg-paper p-4",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 							className: "mono grid h-10 w-10 shrink-0 place-items-center border-2 border-ink bg-ink text-paper text-xs",
 							children: String(i + 1).padStart(2, "0")
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "min-w-0",
+							className: "min-w-0 flex-1",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "font-display text-sm sm:text-base",
+								className: "font-display text-sm leading-tight sm:text-base",
 								children: t
 							})
 						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpRight, { className: "ml-auto h-4 w-4 shrink-0 text-muted-foreground" })
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpRight, { className: "ml-auto h-4 w-4 shrink-0 text-muted-foreground hidden sm:block" })
 					]
 				})
 			}, t))
@@ -878,7 +915,7 @@ function WhoCanApply() {
 		eyebrow: "Who Can Apply",
 		title: "Built for every kind of builder.",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "grid grid-cols-2 gap-3 sm:grid-cols-3",
+			className: "grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5",
 			children: [
 				{
 					icon: Users,
@@ -886,7 +923,7 @@ function WhoCanApply() {
 				},
 				{
 					icon: Rocket,
-					t: "Tech Entrepreneurs"
+					t: "Technology Entrepreneurs"
 				},
 				{
 					icon: FlaskConical,
@@ -910,7 +947,11 @@ function WhoCanApply() {
 				},
 				{
 					icon: Network,
-					t: "AI & Emerging Tech"
+					t: "AI & Emerging Tech Startups"
+				},
+				{
+					icon: Target,
+					t: "Hardware / Hardware+Software Innovators"
 				},
 				{
 					icon: Lightbulb,
@@ -918,9 +959,9 @@ function WhoCanApply() {
 				}
 			].map((it, i) => {
 				return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, {
-					delay: i % 3 * .05,
+					delay: i % 5 * .05,
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: `brut-border brut-hover flex flex-col justify-between gap-6 p-5 sm:p-6 ${[
+						className: `brut-border brut-hover flex h-full flex-col justify-between gap-6 p-4 sm:p-5 ${[
 							"bg-paper",
 							"bg-mustard",
 							"bg-paper",
@@ -929,16 +970,17 @@ function WhoCanApply() {
 							"bg-paper",
 							"bg-mustard",
 							"bg-paper",
-							"bg-paper"
+							"bg-paper",
+							"bg-cobalt text-paper"
 						][i]}`,
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "mono text-[10px] uppercase tracking-widest opacity-70",
 							children: ["Applicant / ", String(i + 1).padStart(2, "0")]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(it.icon, {
-							className: "h-6 w-6",
+							className: "h-5 w-5 sm:h-6 sm:w-6",
 							strokeWidth: 2.5
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "mt-4 font-display text-lg sm:text-xl",
+							className: "mt-4 font-display text-base leading-tight sm:text-lg",
 							children: it.t
 						})] })]
 					})
@@ -957,36 +999,36 @@ function WhyJoin() {
 			className: "brut-border divide-y-2 divide-ink bg-paper",
 			children: [
 				{
-					t: "Build with Experienced Mentors",
-					d: "Learn directly from founders, operators, and IEEE leaders who've done it before."
+					t: "Build with experienced mentors who stay with you past the prototype stage.",
+					d: "Our network supports founders from day one."
 				},
 				{
-					t: "Validate with Industry Experts",
-					d: "Test ideas and products with domain specialists across sectors."
+					t: "Validate ideas using industry expertise.",
+					d: "Test and iterate with professionals."
 				},
 				{
-					t: "Access Strategic Partnerships",
-					d: "Plug into universities, corporations, and IEEE ecosystem partners."
+					t: "Access strategic partnerships and global networks.",
+					d: "Direct connections to IEEE resources."
 				},
 				{
-					t: "Strengthen Tech Capabilities",
-					d: "Deepen engineering, architecture, and R&D through expert consultation."
+					t: "Strengthen both technical and business capabilities.",
+					d: "Holistic development across all pillars."
 				},
 				{
-					t: "Connect with Investors",
-					d: "Curated introductions to VCs, angels, and corporate funds."
+					t: "Connect with investors and ecosystem leaders.",
+					d: "Venture capital and funding opportunities."
 				},
 				{
-					t: "Accelerate Product Development",
-					d: "Move from prototype to MVP to market with structured milestones."
+					t: "Accelerate product development across hardware, software, and hybrid systems.",
+					d: "From ideation to MVP to market."
 				},
 				{
-					t: "Gain Global Visibility",
-					d: "Showcase at national and international IEEE platforms and demo days."
+					t: "Gain visibility through national and international platforms.",
+					d: "Showcase on a global stage."
 				},
 				{
-					t: "Join an Innovation Community",
-					d: "A thriving, borderless network of technology founders."
+					t: "Become part of a thriving, impact-driven innovation community.",
+					d: "Join a network focused on real-world change."
 				}
 			].map((it, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, {
 				delay: i % 8 * .03,
@@ -999,19 +1041,12 @@ function WhyJoin() {
 								className: "mono shrink-0 text-xs uppercase tracking-widest",
 								children: String(i + 1).padStart(2, "0")
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex-1 min-w-0",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "font-display text-lg sm:text-2xl",
-									children: it.t
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "mt-2 text-sm leading-relaxed text-muted-foreground group-hover:text-paper/70 sm:mt-0 sm:hidden",
-									children: it.d
-								})]
-							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "hidden text-sm leading-relaxed text-muted-foreground group-hover:text-paper/70 sm:block sm:max-w-[280px] sm:shrink-0 md:max-w-xs lg:max-w-sm",
-								children: it.d
+								className: "flex-1 min-w-0",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "font-display text-base leading-tight sm:text-xl md:text-2xl",
+									children: it.t
+								})
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpRight, { className: "hidden h-5 w-5 shrink-0 sm:block" })
 						]
@@ -1113,7 +1148,7 @@ function Journey() {
 							children: "A structured pathway, from spark to global scale."
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							className: "mono mt-3 max-w-3xl border-l-4 border-ink pl-4 text-[11px] uppercase tracking-widest sm:text-xs md:mt-4",
-							children: "Every startup follows a structured pathway supported by domain experts, industry mentors, researchers, and strategic partners."
+							children: "Every startup follows this structured pathway — supported by domain experts, industry mentors, researchers, and strategic partners at every single stage, including the ones most incubators skip."
 						})]
 					})]
 				}),
@@ -1222,7 +1257,7 @@ function Launch() {
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							className: "mt-6 max-w-lg text-sm leading-relaxed text-paper/70 sm:text-base",
-							children: "The inaugural edition of the Global Incubation Centre marks a defining milestone for innovation-driven entrepreneurship within the IEEE Computer Society ecosystem. During AICSSYC 2026, GIC officially opens applications for incubation and invites entrepreneurs, researchers, and innovators to pitch their ideas before an expert panel."
+							children: "The inaugural edition of the Global Incubation Centre (GIC) marks a significant milestone in fostering social enterprise-driven, innovation-led entrepreneurship within the IEEE Computer Society ecosystem. During AICSSYC 2026, GIC will officially open applications for startup incubation and invite entrepreneurs, researchers, and innovators to pitch ideas that solve real problems for the 70–80% before an expert panel."
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "mt-8 flex flex-wrap gap-3",

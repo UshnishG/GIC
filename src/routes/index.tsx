@@ -49,6 +49,7 @@ function Index() {
       <Hero />
       <Marquee />
       <About />
+      <Different />
       <Principles />
       <Offerings />
       <WhoCanApply />
@@ -207,7 +208,7 @@ function Hero() {
 
           <Reveal delay={0.16}>
             <p className="mono mt-8 max-w-2xl border-l-4 border-ink pl-4 text-[11px] uppercase tracking-widest sm:mt-10 sm:text-sm">
-              Innovating Ideas / Empowering Entrepreneurs / Creating Global Impact
+              Social enterprise incubation ecosystem / Solving real problems for the 70–80% of the world's population
             </p>
           </Reveal>
 
@@ -231,8 +232,8 @@ function Hero() {
           <Reveal delay={0.3}>
             <div className="mt-10 grid max-w-sm grid-cols-3 border-2 border-ink sm:max-w-2xl sm:mt-14">
               {[
-                ["50+", "Mentors"],
-                ["30+", "Partners"],
+                ["100%", "Social Impact"],
+                ["Hardware", "+ Software"],
                 ["∞", "Ambition"],
               ].map(([n, l], i) => (
                 <div
@@ -258,7 +259,8 @@ function Hero() {
           </div>
           <ol className="flex-1">
             {[
-              "About",
+              "About GIC",
+              "What Makes GIC Different",
               "Core Principles",
               "What We Offer",
               "Who Can Apply",
@@ -332,58 +334,76 @@ function Marquee() {
 /* ================= ABOUT ================= */
 function About() {
   const objectives = [
-    ["Foster Innovation", "Encourage the development of innovative products, technologies, and solutions addressing real-world challenges."],
-    ["Support Entrepreneurs", "Provide structured mentorship, technical guidance, and training to help founders build sustainable ventures."],
-    ["Accelerate Startup Growth", "Incubation programs from idea validation through product development, market readiness, and scaling."],
-    ["Bridge Academia & Industry", "Facilitate collaboration among universities, researchers, corporations, and startups."],
-    ["Enable Global Collaboration", "International partnerships giving startups access to global markets, expertise, and opportunities."],
-    ["Promote Commercialization", "Transform academic research and technological innovations into commercially viable products."],
-    ["Connect with Investors", "Engage with investors, VC firms, angel networks, and strategic partners."],
-    ["Build a Sustainable Ecosystem", "Cultivate innovation, collaboration, ethics, and long-term impact across the founder journey."],
+    ["Foster Innovation", "Encourage the development of innovative hardware, software, and hybrid solutions addressing real-world challenges for marginalised populations."],
+    ["Support Entrepreneurs, Fully", "Provide structured mentorship and technical guidance that continues past the prototype stage, into company-building."],
+    ["Accelerate Startup Growth", "Offer incubation from idea validation through product development, market readiness, and scaling."],
+    ["Bridge Academia and Industry", "Facilitate collaboration among universities, researchers, corporations, government bodies, and startups."],
+    ["Enable Global Collaboration", "Build international partnerships that give startups access to global markets, expertise, and networks."],
   ];
+
   return (
-    <Section id="about" number="01" eyebrow="About / File №001" title="Where transformative ideas become global ventures.">
+    <Section id="about" number="01" eyebrow="About / File №001" title="Most incubation centres stop the moment an idea becomes a prototype. GIC doesn't.">
       <div className="grid grid-cols-12 gap-4 lg:gap-6">
         <Reveal className="col-span-12 lg:col-span-8">
           <div className="brut-border bg-paper p-6 sm:p-8">
             <p className="text-lg leading-relaxed sm:text-xl">
               The <strong>Global Incubation Centre (GIC)</strong> is an initiative of the{" "}
-              <strong>IEEE Computer Society</strong>, established to nurture the next
-              generation of innovators, entrepreneurs, researchers, and technology leaders.
-              It serves as a collaborative ecosystem where transformative ideas evolve into
-              scalable products and globally competitive ventures.
+              <strong>IEEE Computer Society</strong>, built as a social enterprise incubation
+              ecosystem dedicated to solving real problems for the 70–80% of the world's
+              population who are typically underserved by mainstream innovation — marginalised
+              communities, underserved regions, and overlooked markets.
             </p>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Whether you are a student with a breakthrough concept, a researcher developing
-              cutting-edge technology, or an entrepreneur building the next disruptive
-              startup — GIC provides the platform to accelerate your journey.
+              GIC exists to close two gaps at once: the gap between research and real-world impact,
+              and the gap between prototype and startup — the exact point where most founders are left
+              to fend for themselves. We stay with founders through both.
+            </p>
+            <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Whether the solution is a hardware device, a software platform, or a hardware + software
+              system, GIC provides the mentorship, technical guidance, and structured support to take it
+              from a bold idea to a sustainable, scalable venture with genuine social impact.
             </p>
           </div>
         </Reveal>
 
         <Reveal delay={0.08} className="col-span-12 lg:col-span-4">
           <div className="grid h-full grid-rows-2 gap-4 lg:gap-6">
-            <StatCard label="Founded" value="2026" note="Under IEEE·CS charter" />
-            <StatCard label="Scope" value="Global" note="Remote-first, borderless" accent />
+            <StatCard label="Target" value="70-80%" note="Of the world's population" />
+            <StatCard label="Scope" value="Global" note="Hardware & Software" accent />
           </div>
         </Reveal>
       </div>
 
       <div className="mt-6 grid grid-cols-12 gap-4 lg:gap-6">
-        <Reveal className="col-span-12 md:col-span-6">
+        <Reveal className="col-span-12 lg:col-span-4">
           <BigCard tag="Vision" icon={Target} accent="cobalt">
-            To become a globally recognized incubation ecosystem that empowers innovators to
-            develop transformative technologies, build sustainable enterprises, and create
-            meaningful societal impact.
+            To become a globally recognized social enterprise incubation ecosystem that empowers innovators to build technologies and startups that create meaningful, lasting change for the majority of the world's population — not just its most privileged segment.
           </BigCard>
         </Reveal>
-        <Reveal delay={0.08} className="col-span-12 md:col-span-6">
-          <BigCard tag="Mission" icon={Rocket} accent="brick">
-            Foster innovation-driven entrepreneurship, support early-stage startups through
-            structured incubation, connect innovators with mentors, industry experts,
-            investors, and academic leaders — and accelerate the commercialization of
-            research and emerging technologies.
-          </BigCard>
+        <Reveal delay={0.08} className="col-span-12 lg:col-span-8">
+          <div className="brut-border brut-shadow-brick h-full bg-paper p-6 sm:p-8">
+            <div className="flex items-center justify-between">
+              <div className="mono text-[10px] uppercase tracking-widest text-brick">Mission</div>
+              <div className="grid h-10 w-10 place-items-center border-2 border-ink bg-ink text-paper">
+                <Rocket className="h-4 w-4" />
+              </div>
+            </div>
+            <div className="mt-6 font-display text-2xl sm:text-3xl">Mission</div>
+            <ul className="mt-4 space-y-4">
+              {[
+                "Foster innovation-driven, socially conscious entrepreneurship.",
+                "Support early-stage startups through structured, end-to-end incubation — from idea to prototype, and from prototype to startup.",
+                "Connect innovators with mentors, industry experts, investors, and academic leaders who stay engaged through every stage.",
+                "Accelerate the commercialization of research and emerging technologies, with priority given to solutions serving marginalised and underserved populations.",
+                "Build an inclusive global community of entrepreneurs, researchers, and technology professionals working across hardware, software, and hybrid systems."
+              ].map((m, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <div className="mono mt-1 shrink-0 text-xs text-brick">0{i + 1}</div>
+                  <div className="text-base leading-relaxed text-muted-foreground sm:text-lg">{m}</div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </Reveal>
       </div>
 
@@ -391,16 +411,16 @@ function About() {
         <div className="mono mb-6 flex items-center gap-3 text-[11px] uppercase tracking-widest">
           <span className="brut-border bg-ink px-2 py-1 text-paper">Objectives</span>
           <span className="h-px flex-1 bg-ink" />
-          <span className="text-muted-foreground">01 → 08</span>
+          <span className="text-muted-foreground">01 → 05</span>
         </div>
-        <div className="grid grid-cols-1 gap-0 border-2 border-ink sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-0 border-2 border-ink sm:grid-cols-2 lg:grid-cols-3">
           {objectives.map(([t, d], i) => {
-            const isLastCol_lg = (i + 1) % 4 === 0;
+            const isLastCol_lg = (i + 1) % 3 === 0;
             const isLastCol_sm = i % 2 !== 0;
-            const isLastRow_lg = i >= 4;
-            const isLastRow_sm = i >= 6;
+            const isLastRow_lg = i >= 3; // 5 items total -> index 3 and 4 are last row
+            const isLastRow_sm = i >= 4; // index 4 is last row
             return (
-              <Reveal key={t} delay={(i % 4) * 0.05}>
+              <Reveal key={t} delay={(i % 3) * 0.05}>
                 <div
                   className={[
                     "h-full p-5 sm:p-6",
@@ -464,17 +484,89 @@ function About() {
   );
 }
 
+/* ================= DIFFERENT ================= */
+function Different() {
+  const focuses = [
+    "Underserved and marginalised communities",
+    "Low-resource and rural settings",
+    "Accessibility and inclusion challenges",
+    "Public health, education, livelihood, and financial inclusion",
+    "Climate and sustainability challenges affecting vulnerable populations",
+  ];
+  return (
+    <Section id="different" number="01-B" eyebrow="What Makes GIC Different" title="We don't stop at the prototype.">
+      <Reveal>
+        <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl md:max-w-4xl">
+          Traditional incubation support often ends once a working prototype exists — leaving founders to figure out funding, business structure, go-to-market, and scaling on their own. GIC is built specifically to close that gap. This continuity is the core of what GIC offers.
+        </p>
+      </Reveal>
+
+      {/* Ledger Table */}
+      <Reveal delay={0.1}>
+        <div className="mt-10 brut-border brut-shadow-cobalt bg-paper lg:mt-12">
+          <div className="grid grid-cols-1 divide-y-2 divide-ink md:grid-cols-[1fr_2fr] md:divide-x-2 md:divide-y-0">
+            <div className="flex flex-col border-b-2 border-ink bg-ink p-5 text-paper md:border-b-0 sm:p-6">
+              <div className="mono text-[10px] uppercase tracking-widest text-mustard">Stage 1</div>
+              <div className="mt-3 font-display text-2xl sm:text-3xl">Idea → Prototype</div>
+            </div>
+            <div className="p-5 sm:p-6 md:p-8">
+              <p className="text-base leading-relaxed sm:text-lg">
+                Ideation support, technical mentorship, validation, and hands-on prototyping guidance across hardware, software, and hardware+software systems.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 border-t-2 border-ink divide-y-2 divide-ink md:grid-cols-[1fr_2fr] md:divide-x-2 md:divide-y-0">
+            <div className="flex flex-col border-b-2 border-ink bg-ink p-5 text-paper md:border-b-0 sm:p-6">
+              <div className="mono text-[10px] uppercase tracking-widest text-brick">Stage 2</div>
+              <div className="mt-3 font-display text-2xl sm:text-3xl">Prototype → Startup</div>
+            </div>
+            <div className="p-5 sm:p-6 md:p-8">
+              <p className="text-base leading-relaxed sm:text-lg">
+                Business strategy, investor readiness, legal/IP guidance, mentor-matching, and go-to-market support to turn a working prototype into a functioning company.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Reveal>
+
+      {/* Focus Area */}
+      <Reveal delay={0.2}>
+        <div className="mt-16 sm:mt-20">
+          <div className="mono inline-flex items-center gap-2 text-[11px] uppercase tracking-widest">
+            <span className="brut-border bg-brick px-2 py-1 text-paper">Focus Area</span>
+          </div>
+          <h3 className="mt-4 font-display text-3xl sm:text-4xl">Social Enterprise for the 70–80%</h3>
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg md:max-w-3xl">
+            GIC prioritizes ventures that address problems affecting the majority, not the minority — the populations most incubation ecosystems overlook. Solutions can be hardware-based, software-based, or a combination of both — GIC's mentorship and infrastructure support all three tracks equally.
+          </p>
+
+          <div className="mt-8 grid grid-cols-1 gap-3 border-2 border-ink bg-mustard p-1 sm:grid-cols-2 lg:grid-cols-3">
+            {focuses.map((f, i) => (
+              <div key={i} className="brut-border bg-paper p-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-ink" />
+                  <span className="font-display text-sm leading-tight sm:text-base">{f}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Reveal>
+    </Section>
+  );
+}
+
 /* ================= PRINCIPLES ================= */
 function Principles() {
   const items = [
-    { icon: Lightbulb, t: "Innovation First", d: "Every transformative venture begins with bold ideas supported by rigorous innovation." },
-    { icon: Rocket, t: "Entrepreneur-Centric", d: "Our programs are designed around the needs, aspirations, and growth of founders." },
-    { icon: Globe2, t: "Global Perspective", d: "Innovation transcends borders. We encourage international collaboration and market access." },
-    { icon: Handshake, t: "Collaboration > Competition", d: "Meaningful innovation flourishes through multidisciplinary collaboration and shared expertise." },
-    { icon: ShieldCheck, t: "Integrity & Ethics", d: "Guided by transparency, fairness, accountability, and ethical technology development." },
-    { icon: Users, t: "Inclusivity", d: "Innovators from diverse backgrounds and disciplines — equal opportunities for all." },
-    { icon: Sparkles, t: "Continuous Learning", d: "Entrepreneurship is a journey of lifelong learning, adaptation, and resilience." },
-    { icon: TrendingUp, t: "Sustainable Impact", d: "Ventures that create lasting economic, technological, environmental, and societal value." },
+    { icon: Lightbulb, t: "Impact First", d: "Every venture we support must move the needle for the people it's built for." },
+    { icon: Rocket, t: "Entrepreneur-Centric", d: "Our support doesn't end at the prototype; it's designed around the founder's full journey." },
+    { icon: Globe2, t: "Global Perspective", d: "Innovation transcends borders; we encourage international collaboration and market access." },
+    { icon: Handshake, t: "Collaboration Over Competition", d: "Meaningful innovation flourishes through multidisciplinary collaboration." },
+    { icon: ShieldCheck, t: "Integrity & Ethics", d: "Every initiative is guided by transparency, fairness, and accountability." },
+    { icon: Users, t: "Inclusivity", d: "We welcome innovators from diverse backgrounds, disciplines, and communities." },
+    { icon: Sparkles, t: "Continuous Learning", d: "Entrepreneurship is a journey of lifelong learning and resilience." },
+    { icon: TrendingUp, t: "Sustainable Impact", d: "We back ventures that create lasting economic, technological, environmental, and societal value." },
   ];
   return (
     <Section id="principles" number="02" eyebrow="Core Principles" title="The rules of the house.">
@@ -518,11 +610,11 @@ function Principles() {
 /* ================= OFFERINGS ================= */
 function Offerings() {
   const items = [
-    "Structured Startup Incubation",
+    "Structured Startup Incubation (idea → prototype → startup)",
     "Business Strategy Development",
-    "Expert Mentorship",
+    "Expert Mentorship through prototyping and company-building",
     "Investor Readiness Programs",
-    "Technical Consultation",
+    "Technical Consultation across hardware, software, & hybrid systems",
     "Startup Pitch Opportunities",
     "Product Validation",
     "Networking with Global Experts",
@@ -531,8 +623,7 @@ function Offerings() {
     "Industry Collaboration",
     "Workshops and Bootcamps",
     "Intellectual Property Guidance",
-    "Demo Days & Showcase Events",
-    "International Collaboration",
+    "Demo Days and Showcase Events",
   ];
   return (
     <Section
@@ -541,17 +632,17 @@ function Offerings() {
       eyebrow="What GIC Offers"
       title="A full stack for the modern founder."
     >
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
         {items.map((t, i) => (
           <Reveal key={t} delay={(i % 3) * 0.03}>
-            <div className="brut-border brut-hover flex items-center gap-4 bg-paper p-4">
+            <div className="brut-border brut-hover flex h-full items-center gap-4 bg-paper p-4">
               <div className="mono grid h-10 w-10 shrink-0 place-items-center border-2 border-ink bg-ink text-paper text-xs">
                 {String(i + 1).padStart(2, "0")}
               </div>
-              <div className="min-w-0">
-                <div className="font-display text-sm sm:text-base">{t}</div>
+              <div className="min-w-0 flex-1">
+                <div className="font-display text-sm leading-tight sm:text-base">{t}</div>
               </div>
-              <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground" />
+              <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground hidden sm:block" />
             </div>
           </Reveal>
         ))}
@@ -564,29 +655,30 @@ function Offerings() {
 function WhoCanApply() {
   const who = [
     { icon: Users, t: "Students" },
-    { icon: Rocket, t: "Tech Entrepreneurs" },
+    { icon: Rocket, t: "Technology Entrepreneurs" },
     { icon: FlaskConical, t: "Researchers" },
     { icon: Sparkles, t: "Social Innovators" },
     { icon: BadgeCheck, t: "Faculty Members" },
     { icon: Cpu, t: "Deep-Tech Founders" },
     { icon: Briefcase, t: "Early-Stage Startups" },
-    { icon: Network, t: "AI & Emerging Tech" },
+    { icon: Network, t: "AI & Emerging Tech Startups" },
+    { icon: Target, t: "Hardware / Hardware+Software Innovators" },
     { icon: Lightbulb, t: "Individual Innovators" },
   ];
   return (
     <Section id="who" number="04" eyebrow="Who Can Apply" title="Built for every kind of builder.">
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
         {who.map((it, i) => {
-          const accents = ["bg-paper", "bg-mustard", "bg-paper", "bg-paper", "bg-brick text-paper", "bg-paper", "bg-mustard", "bg-paper", "bg-paper"];
+          const accents = ["bg-paper", "bg-mustard", "bg-paper", "bg-paper", "bg-brick text-paper", "bg-paper", "bg-mustard", "bg-paper", "bg-paper", "bg-cobalt text-paper"];
           return (
-            <Reveal key={it.t} delay={(i % 3) * 0.05}>
-              <div className={`brut-border brut-hover flex flex-col justify-between gap-6 p-5 sm:p-6 ${accents[i]}`}>
+            <Reveal key={it.t} delay={(i % 5) * 0.05}>
+              <div className={`brut-border brut-hover flex h-full flex-col justify-between gap-6 p-4 sm:p-5 ${accents[i]}`}>
                 <div className="mono text-[10px] uppercase tracking-widest opacity-70">
                   Applicant / {String(i + 1).padStart(2, "0")}
                 </div>
                 <div>
-                  <it.icon className="h-6 w-6" strokeWidth={2.5} />
-                  <div className="mt-4 font-display text-lg sm:text-xl">{it.t}</div>
+                  <it.icon className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2.5} />
+                  <div className="mt-4 font-display text-base leading-tight sm:text-lg">{it.t}</div>
                 </div>
               </div>
             </Reveal>
@@ -600,14 +692,14 @@ function WhoCanApply() {
 /* ================= WHY JOIN ================= */
 function WhyJoin() {
   const items = [
-    { t: "Build with Experienced Mentors", d: "Learn directly from founders, operators, and IEEE leaders who've done it before." },
-    { t: "Validate with Industry Experts", d: "Test ideas and products with domain specialists across sectors." },
-    { t: "Access Strategic Partnerships", d: "Plug into universities, corporations, and IEEE ecosystem partners." },
-    { t: "Strengthen Tech Capabilities", d: "Deepen engineering, architecture, and R&D through expert consultation." },
-    { t: "Connect with Investors", d: "Curated introductions to VCs, angels, and corporate funds." },
-    { t: "Accelerate Product Development", d: "Move from prototype to MVP to market with structured milestones." },
-    { t: "Gain Global Visibility", d: "Showcase at national and international IEEE platforms and demo days." },
-    { t: "Join an Innovation Community", d: "A thriving, borderless network of technology founders." },
+    { t: "Build with experienced mentors who stay with you past the prototype stage.", d: "Our network supports founders from day one." },
+    { t: "Validate ideas using industry expertise.", d: "Test and iterate with professionals." },
+    { t: "Access strategic partnerships and global networks.", d: "Direct connections to IEEE resources." },
+    { t: "Strengthen both technical and business capabilities.", d: "Holistic development across all pillars." },
+    { t: "Connect with investors and ecosystem leaders.", d: "Venture capital and funding opportunities." },
+    { t: "Accelerate product development across hardware, software, and hybrid systems.", d: "From ideation to MVP to market." },
+    { t: "Gain visibility through national and international platforms.", d: "Showcase on a global stage." },
+    { t: "Become part of a thriving, impact-driven innovation community.", d: "Join a network focused on real-world change." },
   ];
   return (
     <Section id="why" number="05" eyebrow="Why Join GIC" title="Eight reasons founders choose us.">
@@ -620,13 +712,7 @@ function WhyJoin() {
                   {String(i + 1).padStart(2, "0")}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="font-display text-lg sm:text-2xl">{it.t}</div>
-                  <div className="mt-2 text-sm leading-relaxed text-muted-foreground group-hover:text-paper/70 sm:mt-0 sm:hidden">
-                    {it.d}
-                  </div>
-                </div>
-                <div className="hidden text-sm leading-relaxed text-muted-foreground group-hover:text-paper/70 sm:block sm:max-w-[280px] sm:shrink-0 md:max-w-xs lg:max-w-sm">
-                  {it.d}
+                  <div className="font-display text-base leading-tight sm:text-xl md:text-2xl">{it.t}</div>
                 </div>
                 <ArrowUpRight className="hidden h-5 w-5 shrink-0 sm:block" />
               </div>
@@ -697,8 +783,7 @@ function Journey() {
               A structured pathway, from spark to global scale.
             </h2>
             <p className="mono mt-3 max-w-3xl border-l-4 border-ink pl-4 text-[11px] uppercase tracking-widest sm:text-xs md:mt-4">
-              Every startup follows a structured pathway supported by domain experts, industry
-              mentors, researchers, and strategic partners.
+              Every startup follows this structured pathway — supported by domain experts, industry mentors, researchers, and strategic partners at every single stage, including the ones most incubators skip.
             </p>
           </div>
         </div>
@@ -775,11 +860,8 @@ function Launch() {
               <span className="text-brick">global impact</span>.
             </h3>
             <p className="mt-6 max-w-lg text-sm leading-relaxed text-paper/70 sm:text-base">
-              The inaugural edition of the Global Incubation Centre marks a defining
-              milestone for innovation-driven entrepreneurship within the IEEE Computer
-              Society ecosystem. During AICSSYC 2026, GIC officially opens applications
-              for incubation and invites entrepreneurs, researchers, and innovators to
-              pitch their ideas before an expert panel.
+              The inaugural edition of the Global Incubation Centre (GIC) marks a significant milestone in fostering social enterprise-driven, innovation-led entrepreneurship within the IEEE Computer Society ecosystem.
+              During AICSSYC 2026, GIC will officially open applications for startup incubation and invite entrepreneurs, researchers, and innovators to pitch ideas that solve real problems for the 70–80% before an expert panel.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
