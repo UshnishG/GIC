@@ -90,7 +90,7 @@ function TopStrip() {
 
 /* ================= ANIMATED HEADING ================= */
 function AnimatedHeading() {
-  const lines = ["Global", "Incubation", "Centre"];
+  const lines = ["Global", "Incubation", "Committee"];
   const [tick, setTick] = useState(0);
 
   useEffect(() => {
@@ -136,12 +136,12 @@ function AnimatedHeading() {
         {lines.map((line, i) => (
           <span key={i} className="block overflow-hidden">
             <motion.span
-              className={`block ${line === "Centre" ? "relative inline-block" : ""}`}
+              className={`block ${line === "Committee" ? "relative inline-block" : ""}`}
               variants={word}
             >
-              {line === "Centre" ? (
+              {line === "Committee" ? (
                 <>
-                  <span className="relative z-10 px-3 text-paper">Centre</span>
+                  <span className="relative z-10 px-3 text-paper">Committee</span>
                   <span className="absolute inset-0 z-0 bg-brick" aria-hidden />
                 </>
               ) : (
@@ -190,7 +190,7 @@ function Hero() {
         {/* LEFT: label column — decorative, hidden on small screens */}
         <aside className="relative col-span-12 hidden border-r-2 border-ink px-2 py-8 md:col-span-1 md:block">
           <div className="mono sticky top-32 origin-top-left rotate-180 text-[10px] uppercase tracking-[0.3em] text-ink [writing-mode:vertical-rl]">
-            IEEE·CS / Global Incubation Centre / File №001
+            IEEE·CS / Global Incubation Committee / File №001
           </div>
         </aside>
 
@@ -199,7 +199,7 @@ function Hero() {
           <Reveal>
             <div className="mono flex flex-wrap items-center gap-2 text-[10px] uppercase tracking-widest sm:gap-3 sm:text-[11px]">
               <span className="brut-border bg-mustard px-2 py-1">№ 001</span>
-              <span>Global Incubation Centre</span>
+              <span>Global Incubation Committee</span>
               <span className="text-muted-foreground">/ IEEE Computer Society</span>
             </div>
           </Reveal>
@@ -208,7 +208,7 @@ function Hero() {
 
           <Reveal delay={0.16}>
             <p className="mono mt-8 max-w-2xl border-l-4 border-ink pl-4 text-[11px] uppercase tracking-widest sm:mt-10 sm:text-sm">
-              Social enterprise incubation ecosystem / Solving real problems for the 70–80% of the world's population
+              An exclusive startup pitching competition for AICSSYC / Solving real problems for the 70–80% of the world's population
             </p>
           </Reveal>
 
@@ -342,14 +342,14 @@ function About() {
   ];
 
   return (
-    <Section id="about" number="01" eyebrow="About / File №001" title="Most incubation centres stop the moment an idea becomes a prototype. GIC doesn't.">
+    <Section id="about" number="01" eyebrow="About / File №001" title="Most incubation programs stop the moment an idea becomes a prototype. GIC doesn't.">
       <div className="grid grid-cols-12 gap-4 lg:gap-6">
         <Reveal className="col-span-12 lg:col-span-8">
           <div className="brut-border bg-paper p-6 sm:p-8">
             <p className="text-lg leading-relaxed sm:text-xl">
-              The <strong>Global Incubation Centre (GIC)</strong> is an initiative of the{" "}
-              <strong>IEEE Computer Society</strong>, built as a social enterprise incubation
-              ecosystem dedicated to solving real problems for the 70–80% of the world's
+              The <strong>Global Incubation Committee (GIC)</strong> is an initiative of the{" "}
+              <strong>IEEE Computer Society</strong>, built as an exclusive startup pitching competition for AICSSYC, followed by a dedicated incubation
+              ecosystem to solve real problems for the 70–80% of the world's
               population who are typically underserved by mainstream innovation — marginalised
               communities, underserved regions, and overlooked markets.
             </p>
@@ -860,8 +860,8 @@ function Launch() {
               <span className="text-brick">global impact</span>.
             </h3>
             <p className="mt-6 max-w-lg text-sm leading-relaxed text-paper/70 sm:text-base">
-              The inaugural edition of the Global Incubation Centre (GIC) marks a significant milestone in fostering social enterprise-driven, innovation-led entrepreneurship within the IEEE Computer Society ecosystem.
-              During AICSSYC 2026, GIC will officially open applications for startup incubation and invite entrepreneurs, researchers, and innovators to pitch ideas that solve real problems for the 70–80% before an expert panel.
+              The inaugural edition of the Global Incubation Committee (GIC) marks a significant milestone in fostering social enterprise-driven, innovation-led entrepreneurship within the IEEE Computer Society ecosystem.
+              GIC is an exclusive startup pitching competition for AICSSYC 2026. The top 10 teams will be called in to AICSSYC for pitching their ideas live before an expert panel, after which they will receive the dedicated incubation support they need.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
@@ -977,6 +977,9 @@ function Apply() {
 /* ================= BENEFITS ================= */
 function Benefits() {
   const items = [
+    "Prize Money up to $2500",
+    "Travel Allowance (Top 10)",
+    "Exclusive Goodies (Top 10)",
     "1:1 Mentorship",
     "Investor Connect",
     "Networking",
@@ -1281,13 +1284,13 @@ function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12">
           <div className="sm:col-span-2 lg:col-span-5">
             <div className="flex items-center gap-3">
-              <div className="grid h-10 w-10 shrink-0 place-items-center border-2 border-paper bg-mustard text-ink mono text-sm font-bold">
-                G/
+              <div className="grid h-10 w-10 shrink-0 place-items-center border-2 border-paper bg-paper p-1">
+                <img src="/logo.png" alt="GIC Logo" className="h-full w-full object-contain" />
               </div>
               <div>
                 <div className="font-display text-lg">GIC</div>
                 <div className="mono text-[10px] uppercase tracking-widest text-paper/60">
-                  IEEE·CS / Global Incubation Centre
+                  IEEE·CS / Global Incubation Committee
                 </div>
               </div>
             </div>

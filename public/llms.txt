@@ -1,6 +1,6 @@
-# Global Incubation Centre (GIC)
+# Global Incubation Committee (GIC)
 
-The Global Incubation Centre (GIC) is an initiative of the IEEE Computer Society, a social enterprise incubation ecosystem dedicated to solving real problems for the 70–80% of the world's population who are typically underserved by mainstream innovation.
+The Global Incubation Committee (GIC) is an initiative of the IEEE Computer Society, a social enterprise incubation ecosystem dedicated to solving real problems for the 70–80% of the world's population who are typically underserved by mainstream innovation.
 
 ## Core Information
 - **Target Audience:** Startups, student founders, researchers, social innovators.

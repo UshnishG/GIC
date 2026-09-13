@@ -75,27 +75,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Global Incubation Centre (GIC) — IEEE Computer Society" },
+      { title: "Global Incubation Committee (GIC) — IEEE Computer Society" },
       {
         name: "description",
         content:
-          "The Global Incubation Centre by IEEE Computer Society — empowering innovators, accelerating startups, and building the future. Launching at AICSSYC 2026.",
+          "The Global Incubation Committee by IEEE Computer Society — empowering innovators, accelerating startups, and building the future. Launching at AICSSYC 2026.",
       },
       { name: "author", content: "IEEE Computer Society" },
-      { property: "og:title", content: "Global Incubation Centre (GIC) — IEEE Computer Society" },
+      { property: "og:title", content: "Global Incubation Committee (GIC) — IEEE Computer Society" },
       {
         property: "og:description",
         content:
-          "The Global Incubation Centre by IEEE Computer Society — empowering innovators, accelerating startups, and building the future. Launching at AICSSYC 2026.",
+          "The Global Incubation Committee by IEEE Computer Society — empowering innovators, accelerating startups, and building the future. Launching at AICSSYC 2026.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Global Incubation Centre (GIC) — IEEE Computer Society" },
-      { name: "twitter:description", content: "The Global Incubation Centre by IEEE Computer Society — empowering innovators, accelerating startups, and building the future. Launching at AICSSYC 2026." },
+      { name: "twitter:title", content: "Global Incubation Committee (GIC) — IEEE Computer Society" },
+      { name: "twitter:description", content: "The Global Incubation Committee by IEEE Computer Society — empowering innovators, accelerating startups, and building the future. Launching at AICSSYC 2026." },
       { property: "og:image", content: "/og-image.jpg" },
       { name: "twitter:image", content: "/og-image.jpg" },
     ],
     links: [
+      { rel: "icon", type: "image/png", href: "/logo.png" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },

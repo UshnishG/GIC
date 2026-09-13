@@ -29,8 +29,8 @@ export function Nav() {
     >
       <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <a href="#top" className="flex items-center gap-3">
-          <div className="grid h-10 w-10 shrink-0 place-items-center border-2 border-ink bg-ink text-paper mono text-sm font-bold">
-            G/
+          <div className="grid h-10 w-10 shrink-0 place-items-center border-2 border-ink bg-paper p-1">
+            <img src="/logo.png" alt="GIC Logo" className="h-full w-full object-contain" />
           </div>
           <div className="flex min-w-0 flex-col leading-none">
             <span className="font-display text-sm">GIC</span>
