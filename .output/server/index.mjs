@@ -18,30 +18,51 @@ var public_assets_data_default = {
 	"/favicon.ico": {
 		"type": "image/vnd.microsoft.icon",
 		"etag": "\"4f95-3RXc3p2mhEAs1WBwaIvE0Y0uu0Y\"",
-		"mtime": "2026-07-08T20:40:56.335Z",
+		"mtime": "2026-10-03T17:20:21.362Z",
 		"size": 20373,
 		"path": "../public/favicon.ico"
 	},
-	"/assets/routes-CMThE-va.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"2eab3-EE0aKFWmgCimdymXxM5qop3Zfd4\"",
-		"mtime": "2026-08-03T17:40:49.661Z",
-		"size": 191155,
-		"path": "../public/assets/routes-CMThE-va.js"
+	"/llms.txt": {
+		"type": "text/plain; charset=utf-8",
+		"etag": "\"418-WTCEa+l6hi/C0L9L7BB2dZb1+Hg\"",
+		"mtime": "2026-10-03T17:20:21.363Z",
+		"size": 1048,
+		"path": "../public/llms.txt"
 	},
-	"/assets/index-UW1sw1BQ.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"54567-bD7tZPIr5vdJ1MDaiG974KoD8iE\"",
-		"mtime": "2026-08-03T17:40:49.660Z",
-		"size": 345447,
-		"path": "../public/assets/index-UW1sw1BQ.js"
+	"/logo.png": {
+		"type": "image/png",
+		"etag": "\"2afc7-ulw59iHCfCuqFmTYTxEqSVMa2ZY\"",
+		"mtime": "2026-10-03T17:20:21.367Z",
+		"size": 176071,
+		"path": "../public/logo.png"
 	},
-	"/assets/styles-C9Yb9Y1Q.css": {
+	"/assets/styles-BPuawkVM.css": {
 		"type": "text/css; charset=utf-8",
-		"etag": "\"14808-KyVSFg7ARvwAK6Ntupav2UWBCdw\"",
-		"mtime": "2026-08-03T17:40:49.662Z",
-		"size": 83976,
-		"path": "../public/assets/styles-C9Yb9Y1Q.css"
+		"etag": "\"12d06-mheTE0X01x5GxJZRmsr2VwJxkSA\"",
+		"mtime": "2026-10-05T08:30:18.656Z",
+		"size": 77062,
+		"path": "../public/assets/styles-BPuawkVM.css"
+	},
+	"/assets/index-Ca-YgIYd.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"6bc95-LBo8VpJdcjZIvMN//pExPSlX1Po\"",
+		"mtime": "2026-10-05T08:30:18.655Z",
+		"size": 441493,
+		"path": "../public/assets/index-Ca-YgIYd.js"
+	},
+	"/robots.txt": {
+		"type": "text/plain; charset=utf-8",
+		"etag": "\"19-yHADZo6lKl+mSNPU9098EiqzPCE\"",
+		"mtime": "2026-10-03T17:20:21.379Z",
+		"size": 25,
+		"path": "../public/robots.txt"
+	},
+	"/og-image.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"aac2d-EZF0Aa9wj3bdIlTbCo3bajBtApg\"",
+		"mtime": "2026-10-03T17:20:21.377Z",
+		"size": 699437,
+		"path": "../public/og-image.jpg"
 	}
 };
 //#endregion
@@ -79,11 +100,11 @@ var findRouteRules = /* @__PURE__ */ (() => {
 		return r;
 	};
 })();
-var _lazy_P6XoEX = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
+var _lazy_QFuE9p = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
 var findRoute = /* @__PURE__ */ (() => {
 	const data = {
 		route: "/**",
-		handler: _lazy_P6XoEX
+		handler: _lazy_QFuE9p
 	};
 	return ((_m, p) => {
 		return {

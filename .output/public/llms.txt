@@ -1,0 +1,21 @@
+# Global Incubation Committee (GIC)
+
+The Global Incubation Committee (GIC) is an initiative of the IEEE Computer Society, a social enterprise incubation ecosystem dedicated to solving real problems for the 70–80% of the world's population who are typically underserved by mainstream innovation.
+
+## Core Information
+- **Target Audience:** Startups, student founders, researchers, social innovators.
+- **Key Offerings:** Idea to prototype to startup incubation, 1:1 mentorship, investor connect, workspace access, product validation.
+- **Launch Event:** AICSSYC 2026 (Oct 8 – 11, 2026).
+- **Focus Areas:** Underserved and marginalised communities, low-resource settings, accessibility, public health, climate sustainability.
+
+## Principles
+1. Impact First
+2. Entrepreneur-Centric
+3. Global Perspective
+4. Collaboration Over Competition
+5. Integrity & Ethics
+6. Inclusivity
+7. Continuous Learning
+8. Sustainable Impact
+
+To apply for incubation, users can visit the website and submit an application for the inaugural cohort.
