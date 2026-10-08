@@ -18,49 +18,49 @@ var public_assets_data_default = {
 	"/favicon.ico": {
 		"type": "image/vnd.microsoft.icon",
 		"etag": "\"4f95-3RXc3p2mhEAs1WBwaIvE0Y0uu0Y\"",
-		"mtime": "2026-10-03T17:20:21.362Z",
+		"mtime": "2026-10-05T12:57:52.059Z",
 		"size": 20373,
 		"path": "../public/favicon.ico"
 	},
 	"/llms.txt": {
 		"type": "text/plain; charset=utf-8",
 		"etag": "\"418-WTCEa+l6hi/C0L9L7BB2dZb1+Hg\"",
-		"mtime": "2026-10-03T17:20:21.363Z",
+		"mtime": "2026-10-05T12:57:52.060Z",
 		"size": 1048,
 		"path": "../public/llms.txt"
 	},
 	"/logo.png": {
 		"type": "image/png",
 		"etag": "\"2afc7-ulw59iHCfCuqFmTYTxEqSVMa2ZY\"",
-		"mtime": "2026-10-03T17:20:21.367Z",
+		"mtime": "2026-10-05T12:57:52.064Z",
 		"size": 176071,
 		"path": "../public/logo.png"
-	},
-	"/assets/styles-BPuawkVM.css": {
-		"type": "text/css; charset=utf-8",
-		"etag": "\"12d06-mheTE0X01x5GxJZRmsr2VwJxkSA\"",
-		"mtime": "2026-10-05T08:30:18.656Z",
-		"size": 77062,
-		"path": "../public/assets/styles-BPuawkVM.css"
-	},
-	"/assets/index-Ca-YgIYd.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"6bc95-LBo8VpJdcjZIvMN//pExPSlX1Po\"",
-		"mtime": "2026-10-05T08:30:18.655Z",
-		"size": 441493,
-		"path": "../public/assets/index-Ca-YgIYd.js"
 	},
 	"/robots.txt": {
 		"type": "text/plain; charset=utf-8",
 		"etag": "\"19-yHADZo6lKl+mSNPU9098EiqzPCE\"",
-		"mtime": "2026-10-03T17:20:21.379Z",
+		"mtime": "2026-10-05T12:57:52.075Z",
 		"size": 25,
 		"path": "../public/robots.txt"
+	},
+	"/assets/index-BV50kkob.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"6e3fb-PZuaPFAbKwPo61zkeSUk6h0yCnc\"",
+		"mtime": "2026-10-08T17:12:10.041Z",
+		"size": 451579,
+		"path": "../public/assets/index-BV50kkob.js"
+	},
+	"/assets/styles-Hr5rz0Cb.css": {
+		"type": "text/css; charset=utf-8",
+		"etag": "\"1325f-5pUxcpTkGHu2QGgyhSltlg+CQS4\"",
+		"mtime": "2026-10-08T17:12:10.042Z",
+		"size": 78431,
+		"path": "../public/assets/styles-Hr5rz0Cb.css"
 	},
 	"/og-image.jpg": {
 		"type": "image/jpeg",
 		"etag": "\"aac2d-EZF0Aa9wj3bdIlTbCo3bajBtApg\"",
-		"mtime": "2026-10-03T17:20:21.377Z",
+		"mtime": "2026-10-05T12:57:52.073Z",
 		"size": 699437,
 		"path": "../public/og-image.jpg"
 	}
@@ -100,11 +100,11 @@ var findRouteRules = /* @__PURE__ */ (() => {
 		return r;
 	};
 })();
-var _lazy_QFuE9p = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
+var _lazy_UWmBV8 = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
 var findRoute = /* @__PURE__ */ (() => {
 	const data = {
 		route: "/**",
-		handler: _lazy_QFuE9p
+		handler: _lazy_UWmBV8
 	};
 	return ((_m, p) => {
 		return {

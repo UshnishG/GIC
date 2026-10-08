@@ -1,12 +1,12 @@
 import { n as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react, t as QueryClientProvider } from "../_libs/react+tanstack__react-query.mjs";
-import { c as HeadContent, d as Outlet, f as createFileRoute, h as useRouter, m as Link, p as createRootRouteWithContext, s as Scripts, u as createRouter } from "../_libs/@tanstack/react-router+[...].mjs";
+import { _ as createRootRouteWithContext, d as Scripts, f as HeadContent, g as createFileRoute, h as Outlet, m as createRouter, v as Link, y as useRouter } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-import { a as Plane, c as FileCheck, d as CircleCheck, f as ChevronRight, i as ShieldCheck, l as ExternalLink, m as ArrowRight, n as Users, o as Layers, p as Award, r as Sparkles, s as Globe, t as X, u as Cpu } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-5MOxOM69.js
+import { _ as ArrowRight, a as ShieldCheck, c as Layers, d as ExternalLink, f as Cpu, g as Award, h as ChevronRight, i as Shield, l as Globe, m as CircleCheck, n as Users, o as Plane, p as Coins, r as Sparkles, s as Mail, t as X, u as FileCheck } from "../_libs/lucide-react.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/router-lh4bTtTF.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-BPuawkVM.css";
+var styles_default = "/assets/styles-Hr5rz0Cb.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {
@@ -215,7 +215,9 @@ function Index() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PitchProcessTimelineSection, { onOpenDossier: () => setIsDossierModalOpen(true) }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FounderBenefitsSection, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MentorsAdvisorsSection, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(EvaluationMatrixSection, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(VenturePartnersSection, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(GovernanceCharterSection, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FaqAccordionSection, {
 				openIndex: openFaqIndex,
 				setOpenIndex: setOpenFaqIndex
@@ -239,16 +241,12 @@ function MastheadLedger({ onOpenDossier }) {
 						children: "LIVE · GIC / IEEE COMPUTER SOCIETY | V1.0 / 2026"
 					})]
 				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "hidden md:flex items-center gap-6 text-[#E5E2DA]",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "CONVENTION: AICSSYC 2026 · OCT 8–11" }),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "•" }),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "text-[#E5E2DA] font-bold",
-							children: "STATUS: APPLICATIONS OPEN"
-						})
-					]
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-[#FAF9F5] font-bold tracking-wide",
+						children: "SYS.LIVE: AICSSYC 2026 ONGOING // COHORT 01 DEMO DAY LIVE // COHORT 02 ROLLING INTAKE"
+					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 					onClick: onOpenDossier,
@@ -301,18 +299,18 @@ function Navbar({ onOpenDossier, scrollToSection }) {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("nav", {
-					className: "hidden xl:flex items-center gap-4 text-[11px] font-semibold uppercase tracking-wider text-[#57534E] shrink-0",
+					className: "hidden xl:flex items-center gap-3.5 text-[11px] font-semibold uppercase tracking-wider text-[#57534E] shrink-0",
 					children: [
 						{
 							label: "Tracks",
 							id: "tracks"
 						},
 						{
-							label: "Tiers & Calc",
+							label: "Tiers",
 							id: "tiers"
 						},
 						{
-							label: "12-Wk Sprint",
+							label: "Sprint",
 							id: "sprint"
 						},
 						{
@@ -320,28 +318,24 @@ function Navbar({ onOpenDossier, scrollToSection }) {
 							id: "about"
 						},
 						{
-							label: "Vision",
-							id: "vision"
-						},
-						{
 							label: "Principles",
 							id: "principles"
-						},
-						{
-							label: "Offerings",
-							id: "offerings"
 						},
 						{
 							label: "Journey",
 							id: "journey"
 						},
 						{
-							label: "Pitch Process",
+							label: "Timeline",
 							id: "pitch-process"
 						},
 						{
-							label: "Benefits",
-							id: "benefits"
+							label: "Evaluation",
+							id: "evaluation"
+						},
+						{
+							label: "Governance",
+							id: "governance"
 						},
 						{
 							label: "FAQ",
@@ -415,19 +409,31 @@ function Navbar({ onOpenDossier, scrollToSection }) {
 					id: "showcase"
 				},
 				{
-					label: "Pitch Process",
+					label: "Pitch Process & Timeline (Sec 08)",
 					id: "pitch-process"
 				},
 				{
-					label: "Benefits",
+					label: "Founder Benefits (Sec 09)",
 					id: "benefits"
 				},
 				{
-					label: "Mentors & Advisors",
+					label: "Mentors & Advisors (Sec 10)",
 					id: "mentors"
 				},
 				{
-					label: "FAQ",
+					label: "Evaluation Matrix (Sec 11)",
+					id: "evaluation"
+				},
+				{
+					label: "Institutional Partners (Sec 12)",
+					id: "partners"
+				},
+				{
+					label: "Governance & IP Charter (Sec 13)",
+					id: "governance"
+				},
+				{
+					label: "FAQ (Sec 14)",
 					id: "faq"
 				}
 			].map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
@@ -447,6 +453,7 @@ function MarqueeTicker() {
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "flex whitespace-nowrap animate-marquee gap-8",
 			children: [
+				"SYS.LIVE: AICSSYC 2026 ONGOING // COHORT 01 DEMO DAY LIVE // COHORT 02 ROLLING INTAKE",
 				"INVEST.",
 				"IMPACT.",
 				"IGNITE.",
@@ -462,7 +469,10 @@ function MarqueeTicker() {
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 					className: "text-[#9E2A2B]",
 					children: "★"
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: text })]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: text.startsWith("SYS.LIVE") ? "text-[#FAF9F5] font-bold bg-[#9E2A2B]/40 px-2 py-0.5 border border-[#9E2A2B]" : "",
+					children: text
+				})]
 			}, i))
 		})
 	});
@@ -2420,8 +2430,27 @@ function PitchProcessTimelineSection({ onOpenDossier }) {
 					children: "SECTION / 08 // PROCESS & TIMELINE"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-					className: "font-serif text-3xl sm:text-4xl text-[#002855] font-normal mb-10",
+					className: "font-serif text-3xl sm:text-4xl text-[#002855] font-normal mb-4",
 					children: "Startup Pitch Process & Official Schedule"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "bg-[#FFFFFF] border-l-4 border-l-[#9E2A2B] border border-[#E5E2DA] p-4 sm:p-5 mb-10 shadow-sm",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex flex-col sm:flex-row sm:items-center justify-between gap-3",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-start sm:items-center gap-3",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "mono text-[10px] bg-[#9E2A2B] text-white px-2.5 py-1 font-bold uppercase tracking-wider shrink-0",
+								children: "INTAKE STATUS NOTICE"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-xs sm:text-sm font-sans font-medium text-[#002855] leading-relaxed",
+								children: "Cohort 01 closed on 15 Sep 2026 and is currently presenting live at AICSSYC (Oct 08–11). Submissions received below are queued for Cohort 02 review."
+							})]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "mono text-[11px] text-[#9E2A2B] font-bold uppercase tracking-wider shrink-0 bg-[#FAF9F5] px-2.5 py-1 border border-[#E5E2DA]",
+							children: "COHORT 02 ACTIVE INTAKE"
+						})]
+					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12",
@@ -2506,10 +2535,10 @@ function PitchProcessTimelineSection({ onOpenDossier }) {
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
 									className: "text-xs text-[#57534E] space-y-2 mono",
 									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "• Applications open: Q2 · 2026" }),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "• Deadline: 15 Sep 2026" }),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "• Shortlist: 30 Sep 2026" }),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "• Pitch Day: AICSSYC 2026 (Oct 8–11)" })
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "• Cohort 01 Closed: 15 Sep 2026" }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "• Demo Day: AICSSYC (Oct 8–11 Live)" }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "• Cohort 02 Applications: Open Rolling" }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "• Cohort 02 Review: Ongoing" })
 									]
 								})
 							]
@@ -2520,14 +2549,14 @@ function PitchProcessTimelineSection({ onOpenDossier }) {
 					className: "bg-[#002855] text-white p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-[0_8px_24px_rgba(0,40,85,0.15)] border border-[#001D40]",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "mono text-xs text-[#9E2A2B] font-bold uppercase bg-white px-2 py-0.5 inline-block mb-1",
-						children: "APPLICATIONS OPEN GLOBALLY · FREE TO APPLY"
+						children: "COHORT 02 ROLLING INTAKE · FREE TO APPLY"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
 						className: "font-serif text-xl sm:text-2xl text-white",
-						children: "Ready to pitch your startup?"
+						children: "Queue your venture for Cohort 02 review."
 					})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 						onClick: onOpenDossier,
 						className: "btn-tactile-crimson bg-[#9E2A2B] text-white hover:bg-[#852324] px-6 py-3.5 text-xs font-bold uppercase tracking-wider border border-[#9E2A2B] active:translate-y-0.5 transition-all whitespace-nowrap",
-						children: "Apply Now →"
+						children: "Apply for Cohort 02 →"
 					})]
 				})
 			]
@@ -2693,10 +2722,203 @@ function MentorsAdvisorsSection() {
 		})
 	});
 }
+function EvaluationMatrixSection() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		id: "evaluation",
+		className: "py-20 border-b border-[#E5E2DA] bg-[#FFFFFF]",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "mx-auto max-w-7xl px-4 sm:px-6",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "mono text-xs font-bold text-[#9E2A2B] uppercase tracking-widest mb-2",
+							children: "SECTION / 11 // EVALUATION BENCHMARKS & SCORING MATRIX"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "font-serif text-3xl sm:text-4xl text-[#002855] font-normal leading-tight",
+							children: "Evaluation Benchmarks & Scoring Matrix"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "mt-2 text-xs sm:text-sm text-[#57534E] max-w-2xl leading-relaxed",
+							children: "Every applicant is assessed across four weighted vectors by our academic and venture review boards. A composite score of 80/100 or higher qualifies ventures for final live pitch selection."
+						})
+					] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "border border-[#E5E2DA] bg-[#F9F8F5] p-4 flex items-center gap-6 shrink-0 shadow-sm",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "mono text-[10px] text-[#57534E] uppercase font-bold",
+								children: "TOTAL SCORE MATRIX"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "mono text-xl font-bold text-[#002855]",
+								children: "100% / 100 PTS"
+							})] }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-8 w-px bg-[#E5E2DA]" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "mono text-[10px] text-[#9E2A2B] uppercase font-bold",
+								children: "SHORTLIST CUTOFF"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "mono text-xl font-bold text-[#9E2A2B]",
+								children: "≥ 80.0 PTS"
+							})] })
+						]
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10",
+					children: [
+						{
+							code: "CRIT / 01",
+							weight: "30%",
+							title: "Problem Depth",
+							tag: "POPULATION IMPACT & UNMET NEED",
+							desc: "Clarity of problem framing and validation that the solution addresses the 70–80% underserved global majority. Evaluates empirical customer discovery, severity of pain point, and structural urgency.",
+							metrics: [
+								"Underserved population focus (70–80% mandate)",
+								"Direct stakeholder field validation",
+								"Economic & societal leverage magnitude"
+							]
+						},
+						{
+							code: "CRIT / 02",
+							weight: "25%",
+							title: "Technical Defensibility",
+							tag: "ENGINEERING NOVELTY & MOAT",
+							desc: "Novelty of IP, patentability, or proprietary deep-tech architecture across hardware, software, or hybrid layers. Assesses technical feasibility, architecture durability, and IEEE domain rigor.",
+							metrics: [
+								"Proprietary IP / algorithmic differentiation",
+								"Hardware-software integration robustness",
+								"IEEE domain engineering standard compliance"
+							]
+						},
+						{
+							code: "CRIT / 03",
+							weight: "25%",
+							title: "Execution & Feasibility",
+							tag: "PROTOTYPE MATURITY & ROADMAP",
+							desc: "Current prototype maturity, speed of iteration, unit economics, and bill-of-materials (BOM) cost realism in low-resource environments alongside realistic 12-week deployment milestones.",
+							metrics: [
+								"Working prototype / tangible MVP evidence",
+								"Low-resource deployment economics & BOM",
+								"Deliverable 12-week milestone sprint plan"
+							]
+						},
+						{
+							code: "CRIT / 04",
+							weight: "20%",
+							title: "Founder Commitment",
+							tag: "TEAM DYNAMICS & COACHABILITY",
+							desc: "Complementary technical domain expertise, coachability with venture mentors, long-term grit, and multidisciplinary alignment to scale the venture continuously past AICSSYC demo day.",
+							metrics: [
+								"Multidisciplinary technical capability",
+								"Mentor receptiveness & rapid execution",
+								"Full dedication to venture commercialization"
+							]
+						}
+					].map((c, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "bg-[#FAF9F5] border border-[#E5E2DA] p-6 flex flex-col justify-between hover:border-[#002855] transition-all shadow-[0_1px_3px_rgba(0,0,0,0.02)]",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center justify-between gap-2 mb-3 pb-3 border-b border-[#E5E2DA]",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "mono text-xs font-bold text-[#9E2A2B]",
+									children: c.code
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "mono text-xs font-bold bg-[#002855] text-white px-2.5 py-0.5",
+									children: c.weight
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+								className: "font-serif text-xl text-[#002855] font-normal mb-1",
+								children: c.title
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "mono text-[10px] font-bold text-[#57534E] uppercase tracking-wider mb-3",
+								children: c.tag
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-xs text-[#57534E] leading-relaxed mb-6 font-sans",
+								children: c.desc
+							})
+						] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "mono text-[10px] font-bold text-[#002855] uppercase tracking-wider mb-2 border-t border-[#E5E2DA] pt-3",
+							children: "Assessment Benchmarks:"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+							className: "space-y-1.5 mono text-[11px] text-[#57534E]",
+							children: c.metrics.map((m, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+								className: "flex items-start gap-1.5 leading-tight",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-[#9E2A2B] font-bold",
+									children: "✓"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: m })]
+							}, idx))
+						})] })]
+					}, i))
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "bg-[#FAF9F5] border border-[#E5E2DA] p-6 shadow-sm",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-center justify-between mono text-xs font-bold text-[#002855] mb-3",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "SCORING COMPOSITION LEDGER" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "WEIGHT DISTRIBUTION (100%)" })]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "h-4 w-full bg-[#E5E2DA] flex overflow-hidden border border-[#E5E2DA]",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "bg-[#002855] h-full text-[9px] text-white mono font-bold flex items-center justify-center",
+									style: { width: "30%" },
+									children: "30%"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "bg-[#003B7A] h-full text-[9px] text-white mono font-bold flex items-center justify-center border-l border-white/20",
+									style: { width: "25%" },
+									children: "25%"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "bg-[#9E2A2B] h-full text-[9px] text-white mono font-bold flex items-center justify-center border-l border-white/20",
+									style: { width: "25%" },
+									children: "25%"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "bg-[#BF3A3C] h-full text-[9px] text-white mono font-bold flex items-center justify-center border-l border-white/20",
+									style: { width: "20%" },
+									children: "20%"
+								})
+							]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3 mono text-[10px] text-[#57534E]",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-1.5",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-2.5 w-2.5 bg-[#002855] inline-block" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Problem Depth (30%)" })]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-1.5",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-2.5 w-2.5 bg-[#003B7A] inline-block" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Technical Defensibility (25%)" })]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-1.5",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-2.5 w-2.5 bg-[#9E2A2B] inline-block" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Execution & Feasibility (25%)" })]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-1.5",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-2.5 w-2.5 bg-[#BF3A3C] inline-block" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Founder Commitment (20%)" })]
+								})
+							]
+						})
+					]
+				})
+			]
+		})
+	});
+}
 function VenturePartnersSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "partners",
-		className: "py-16 border-b border-[#E5E2DA] bg-[#FFFFFF]",
+		className: "py-16 border-b border-[#E5E2DA] bg-[#F9F8F5]",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-7xl px-4 sm:px-6",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -2711,10 +2933,141 @@ function VenturePartnersSection() {
 					"QUANTUM FOUNDRY",
 					"NORTHWIND"
 				].map((p, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "p-5 border border-[#E5E2DA] bg-[#F9F8F5] text-center font-bold text-xs sm:text-sm tracking-wider text-[#002855] mono flex items-center justify-center min-h-[70px] shadow-[0_1px_2px_rgba(0,0,0,0.02)]",
+					className: "p-5 border border-[#E5E2DA] bg-[#FFFFFF] text-center font-bold text-xs sm:text-sm tracking-wider text-[#002855] mono flex items-center justify-center min-h-[70px] shadow-[0_1px_2px_rgba(0,0,0,0.02)]",
 					children: p
 				}, idx))
 			})]
+		})
+	});
+}
+function GovernanceCharterSection() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		id: "governance",
+		className: "py-20 border-b border-[#E5E2DA] bg-[#FFFFFF]",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "mx-auto max-w-7xl px-4 sm:px-6",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "mono text-xs font-bold text-[#9E2A2B] uppercase tracking-widest mb-2",
+					children: "SECTION / 13 // GOVERNANCE & FOUNDER IP CHARTER"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+					className: "font-serif text-3xl sm:text-4xl text-[#002855] font-normal mb-4",
+					children: "Governance & Founder IP Charter"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "text-xs sm:text-sm text-[#57534E] max-w-3xl mb-12 leading-relaxed",
+					children: "The IEEE Computer Society Global Incubation Committee operates under a strict founder-first charter designed to foster ethical engineering without predatory venture terms."
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "grid grid-cols-1 md:grid-cols-2 gap-6 mb-12",
+					children: [
+						{
+							icon: ShieldCheck,
+							badge: "0% EQUITY DILUTION",
+							title: "Zero Equity & Zero Governance Warrants",
+							desc: "GIC operates as an institutional philanthropic incubator under IEEE Computer Society. We take 0% equity, 0% SAFE notes, 0% warrant rights, and zero governance board seats. The cap table remains 100% under founder sovereignty."
+						},
+						{
+							icon: FileCheck,
+							badge: "100% FOUNDER IP",
+							title: "100% Founder-Retained Intellectual Property",
+							desc: "Founders, student creators, and researchers retain 100% unconditional ownership of all source code, patents, CAD schematics, and algorithms. No co-licensing, assignment covenants, or exclusivity restrictions are ever imposed."
+						},
+						{
+							icon: Coins,
+							badge: "NON-DILUTIVE GRANTS",
+							title: "Milestone-Based Grant Disbursement",
+							desc: "Prize capital up to ₹2,00,000 / $2,500 and travel stipends are awarded as pure non-dilutive grants. Capital is disbursed directly against verified technical milestones with zero clawback clauses or debt conversion terms."
+						},
+						{
+							icon: Award,
+							badge: "INSTITUTIONAL INTEGRITY",
+							title: "IEEE Code of Ethics & Unbiased Audit",
+							desc: "All jury assessments, mentor introductions, and corporate partnerships are governed by the IEEE Code of Ethics and AICSSYC steering committee protocols, ensuring meritocratic, unbiased review without commercial conflicts of interest."
+						}
+					].map((clause, idx) => {
+						const Icon = clause.icon;
+						return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "bg-[#FAF9F5] border border-[#E5E2DA] p-6 sm:p-8 flex flex-col justify-between shadow-[0_1px_3px_rgba(0,0,0,0.02)] relative overflow-hidden",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-0 right-0 w-24 h-24 bg-[#002855]/[0.02] rounded-bl-full pointer-events-none" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center justify-between gap-3 mb-4",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "h-10 w-10 bg-[#002855] text-white flex items-center justify-center shrink-0",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { className: "h-5 w-5" })
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "mono text-[10px] font-bold text-[#9E2A2B] bg-[#FFFFFF] border border-[#E5E2DA] px-2.5 py-1 uppercase",
+											children: clause.badge
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										className: "font-serif text-2xl text-[#002855] font-normal mb-3",
+										children: clause.title
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-xs sm:text-sm text-[#57534E] leading-relaxed font-sans",
+										children: clause.desc
+									})
+								] }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "mt-6 pt-4 border-t border-[#E5E2DA] mono text-[11px] text-[#002855] font-semibold flex items-center justify-between",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["CHARTER ARTICLE 13.0", idx + 1] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-[#9E2A2B]",
+										children: "RATIFIED 2026"
+									})]
+								})
+							]
+						}, idx);
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "bg-[#FAF9F5] border-2 border-[#002855] p-8 sm:p-10 relative shadow-[0_4px_16px_rgba(0,40,85,0.06)]",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "grid grid-cols-1 lg:grid-cols-12 gap-8 items-center",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "lg:col-span-8",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "mono text-[10px] font-bold text-[#9E2A2B] uppercase tracking-widest mb-2",
+									children: "// INSTITUTIONAL COVENANT"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "font-serif text-2xl sm:text-3xl text-[#002855] mb-3 font-normal",
+									children: "Our Non-Dilutive Pledge to Engineering Founders"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-xs sm:text-sm text-[#57534E] leading-relaxed",
+									children: "\"We believe foundational breakthrough innovations addressing the world's most difficult problems should not be constrained by short-term predatory dilution. GIC exists solely to empower founders with grant capital, elite IEEE technical networks, and institutional credibility.\""
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "mt-4 flex flex-wrap items-center gap-4 mono text-[11px] text-[#002855] font-bold",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "• 0% EQUITY GUARANTEE" }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "• 100% IP RETENTION" }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "• NON-DILUTIVE DISBURSEMENTS" })
+									]
+								})
+							]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "lg:col-span-4 flex flex-col items-center justify-center p-6 bg-[#FFFFFF] border border-[#E5E2DA] text-center",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(InstitutionalAccreditationSeal, { size: "md" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "mono text-[10px] text-[#002855] font-bold mt-3",
+									children: "IEEE COMPUTER SOCIETY"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "mono text-[9px] text-[#57534E]",
+									children: "SECRETARIAT CHARTER № 2026-GIC"
+								})
+							]
+						})]
+					})
+				})
+			]
 		})
 	});
 }
@@ -2956,7 +3309,7 @@ function Footer({ scrollToSection }) {
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								onClick: () => scrollToSection("about"),
 								className: "hover:underline",
-								children: "About"
+								children: "About & Dual Gaps"
 							}) }),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								onClick: () => scrollToSection("principles"),
@@ -2984,75 +3337,104 @@ function Footer({ scrollToSection }) {
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								onClick: () => scrollToSection("dossier"),
 								className: "hover:underline",
-								children: "Apply"
+								children: "Apply / Intake Dossier"
+							}) }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+								onClick: () => scrollToSection("pitch-process"),
+								className: "hover:underline",
+								children: "Pitch Process (Sec 08)"
+							}) }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+								onClick: () => scrollToSection("evaluation"),
+								className: "hover:underline",
+								children: "Scoring Matrix (Sec 11)"
+							}) }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+								onClick: () => scrollToSection("governance"),
+								className: "hover:underline",
+								children: "Governance Charter (Sec 13)"
 							}) }),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								onClick: () => scrollToSection("mentors"),
 								className: "hover:underline",
-								children: "Mentors"
+								children: "Mentors & Advisors"
 							}) }),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								onClick: () => scrollToSection("partners"),
 								className: "hover:underline",
-								children: "Partners"
+								children: "Institutional Partners"
 							}) }),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-								onClick: () => scrollToSection("benefits"),
+								onClick: () => scrollToSection("faq"),
 								className: "hover:underline",
-								children: "Success Stories"
+								children: "Programme FAQ"
 							}) })
 						]
 					})] }),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "mono font-bold text-white uppercase mb-3",
-						children: "COMPANY & LEGAL"
+						children: "INSTITUTIONAL GOVERNANCE"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "space-y-1.5 text-xs text-[#E5E2DA]/80",
+						className: "space-y-2 text-xs text-[#E5E2DA]/90",
 						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: ["Contact: ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								href: "mailto:gic@aicssyc2026.org",
-								className: "underline",
-								children: "gic@aicssyc2026.org"
-							})] }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+								onClick: () => scrollToSection("governance"),
+								className: "hover:underline text-left flex items-center gap-1.5 text-white",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shield, { className: "h-3 w-3 text-[#9E2A2B]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "IP & Governance Protocol" })]
+							}) }),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-								href: "https://computer.org",
+								href: "https://www.ieee.org/security-privacy.html",
 								target: "_blank",
 								rel: "noreferrer",
-								className: "hover:underline flex items-center gap-1",
-								children: ["IEEE.org ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "h-3 w-3" })]
+								className: "hover:underline flex items-center gap-1.5",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "IEEE Privacy Policy" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "h-3 w-3 text-[#E5E2DA]/60" })]
 							}) }),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: "Privacy Policy & Terms" }),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: "Code of Conduct" })
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+								href: "https://www.ieee.org/about/corporate/governance/p7-8.html",
+								target: "_blank",
+								rel: "noreferrer",
+								className: "hover:underline flex items-center gap-1.5",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "IEEE Code of Ethics" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "h-3 w-3 text-[#E5E2DA]/60" })]
+							}) }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+								href: "mailto:gic@aicssyc2026.org",
+								className: "hover:underline flex items-center gap-1.5 text-[#E5E2DA]",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, { className: "h-3 w-3 text-[#9E2A2B]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Secretariat Desk: gic@aicssyc2026.org" })]
+							}) })
 						]
 					})] })
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "pt-6 border-t border-[#001D40] flex flex-col sm:flex-row items-center justify-between gap-4 mono text-[11px] text-[#E5E2DA]/70",
+				className: "pt-6 border-t border-[#001D40] flex flex-col sm:flex-row items-center justify-between gap-4 mono text-[11px] text-[#E5E2DA]/80",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: "© 2026 GIC · IEEE COMPUTER SOCIETY. ALL RIGHTS RESERVED." }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex items-center gap-4",
+					className: "flex flex-wrap items-center gap-3 sm:gap-4",
 					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "hover:underline cursor-pointer",
-							children: "PRIVACY"
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+							onClick: () => scrollToSection("governance"),
+							className: "hover:underline text-[#FAF9F5] font-semibold",
+							children: "IP & GOVERNANCE PROTOCOL"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "•" }),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "hover:underline cursor-pointer",
-							children: "TERMS"
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+							href: "https://www.ieee.org/security-privacy.html",
+							target: "_blank",
+							rel: "noreferrer",
+							className: "hover:underline",
+							children: "IEEE PRIVACY POLICY"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "•" }),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "hover:underline cursor-pointer",
-							children: "CODE OF CONDUCT"
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+							href: "https://www.ieee.org/about/corporate/governance/p7-8.html",
+							target: "_blank",
+							rel: "noreferrer",
+							className: "hover:underline",
+							children: "IEEE CODE OF ETHICS"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "•" }),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "bg-white text-[#002855] px-1.5 py-0.5 font-bold text-[10px]",
-							children: "ROBOTS.TXT"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "bg-white text-[#002855] px-1.5 py-0.5 font-bold text-[10px]",
-							children: "LLMS.TXT"
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+							href: "mailto:gic@aicssyc2026.org",
+							className: "hover:underline text-[#FAF9F5] font-semibold",
+							children: "SECRETARIAT DESK"
 						})
 					]
 				})]

@@ -120,16 +120,22 @@ export function Index() {
       {/* 17. SECTION 10: MENTORS & ADVISORY BOARD */}
       <MentorsAdvisorsSection />
 
-      {/* 18. SECTION 12: INSTITUTIONAL & CAPITAL PARTNERS */}
+      {/* 18. SECTION 11: EVALUATION BENCHMARKS & SCORING MATRIX */}
+      <EvaluationMatrixSection />
+
+      {/* 19. SECTION 12: INSTITUTIONAL & CAPITAL PARTNERS */}
       <VenturePartnersSection />
 
-      {/* 19. SECTION 14: FREQUENTLY ASKED QUESTIONS */}
+      {/* 20. SECTION 13: GOVERNANCE & FOUNDER IP CHARTER */}
+      <GovernanceCharterSection />
+
+      {/* 21. SECTION 14: FREQUENTLY ASKED QUESTIONS */}
       <FaqAccordionSection openIndex={openFaqIndex} setOpenIndex={setOpenFaqIndex} />
 
       {/* FORMAL INTAKE DOSSIER FORM */}
       <DossierIntakeSection />
 
-      {/* 20. SECTION 15: CORPORATE FOOTER */}
+      {/* 22. CORPORATE FOOTER */}
       <Footer scrollToSection={scrollToSection} />
 
       {/* Application Dossier Modal */}
@@ -152,9 +158,9 @@ function MastheadLedger({ onOpenDossier }: { onOpenDossier: () => void }) {
           </span>
         </div>
         <div className="hidden md:flex items-center gap-6 text-[#E5E2DA]">
-          <span>CONVENTION: AICSSYC 2026 · OCT 8–11</span>
-          <span>•</span>
-          <span className="text-[#E5E2DA] font-bold">STATUS: APPLICATIONS OPEN</span>
+          <span className="text-[#FAF9F5] font-bold tracking-wide">
+            SYS.LIVE: AICSSYC 2026 ONGOING // COHORT 01 DEMO DAY LIVE // COHORT 02 ROLLING INTAKE
+          </span>
         </div>
         <button
           onClick={onOpenDossier}
@@ -220,18 +226,17 @@ function Navbar({ onOpenDossier, scrollToSection }: { onOpenDossier: () => void;
         </a>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden xl:flex items-center gap-4 text-[11px] font-semibold uppercase tracking-wider text-[#57534E] shrink-0">
+        <nav className="hidden xl:flex items-center gap-3.5 text-[11px] font-semibold uppercase tracking-wider text-[#57534E] shrink-0">
           {[
             { label: "Tracks", id: "tracks" },
-            { label: "Tiers & Calc", id: "tiers" },
-            { label: "12-Wk Sprint", id: "sprint" },
+            { label: "Tiers", id: "tiers" },
+            { label: "Sprint", id: "sprint" },
             { label: "About", id: "about" },
-            { label: "Vision", id: "vision" },
             { label: "Principles", id: "principles" },
-            { label: "Offerings", id: "offerings" },
             { label: "Journey", id: "journey" },
-            { label: "Pitch Process", id: "pitch-process" },
-            { label: "Benefits", id: "benefits" },
+            { label: "Timeline", id: "pitch-process" },
+            { label: "Evaluation", id: "evaluation" },
+            { label: "Governance", id: "governance" },
             { label: "FAQ", id: "faq" },
           ].map((item) => (
             <button
@@ -277,10 +282,13 @@ function Navbar({ onOpenDossier, scrollToSection }: { onOpenDossier: () => void;
             { label: "Full Stack Offerings", id: "offerings" },
             { label: "Incubation Journey", id: "journey" },
             { label: "Launch @ AICSSYC 2026", id: "showcase" },
-            { label: "Pitch Process", id: "pitch-process" },
-            { label: "Benefits", id: "benefits" },
-            { label: "Mentors & Advisors", id: "mentors" },
-            { label: "FAQ", id: "faq" },
+            { label: "Pitch Process & Timeline (Sec 08)", id: "pitch-process" },
+            { label: "Founder Benefits (Sec 09)", id: "benefits" },
+            { label: "Mentors & Advisors (Sec 10)", id: "mentors" },
+            { label: "Evaluation Matrix (Sec 11)", id: "evaluation" },
+            { label: "Institutional Partners (Sec 12)", id: "partners" },
+            { label: "Governance & IP Charter (Sec 13)", id: "governance" },
+            { label: "FAQ (Sec 14)", id: "faq" },
           ].map((item) => (
             <button
               key={item.id}
@@ -305,6 +313,7 @@ function MarqueeTicker() {
     <div className="border-y border-[#E5E2DA] bg-[#002855] text-white py-2.5 overflow-hidden mono text-xs uppercase tracking-widest">
       <div className="flex whitespace-nowrap animate-marquee gap-8">
         {[
+          "SYS.LIVE: AICSSYC 2026 ONGOING // COHORT 01 DEMO DAY LIVE // COHORT 02 ROLLING INTAKE",
           "INVEST.",
           "IMPACT.",
           "IGNITE.",
@@ -318,7 +327,7 @@ function MarqueeTicker() {
         ].map((text, i) => (
           <span key={i} className="flex items-center gap-3">
             <span className="text-[#9E2A2B]">★</span>
-            <span>{text}</span>
+            <span className={text.startsWith("SYS.LIVE") ? "text-[#FAF9F5] font-bold bg-[#9E2A2B]/40 px-2 py-0.5 border border-[#9E2A2B]" : ""}>{text}</span>
           </span>
         ))}
       </div>
@@ -1861,9 +1870,26 @@ function PitchProcessTimelineSection({ onOpenDossier }: { onOpenDossier: () => v
         <div className="mono text-xs font-bold text-[#9E2A2B] uppercase tracking-widest mb-2">
           SECTION / 08 // PROCESS & TIMELINE
         </div>
-        <h2 className="font-serif text-3xl sm:text-4xl text-[#002855] font-normal mb-10">
+        <h2 className="font-serif text-3xl sm:text-4xl text-[#002855] font-normal mb-4">
           Startup Pitch Process & Official Schedule
         </h2>
+
+        {/* Cohort 01 Live & Cohort 02 Review Notice */}
+        <div className="bg-[#FFFFFF] border-l-4 border-l-[#9E2A2B] border border-[#E5E2DA] p-4 sm:p-5 mb-10 shadow-sm">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="flex items-start sm:items-center gap-3">
+              <span className="mono text-[10px] bg-[#9E2A2B] text-white px-2.5 py-1 font-bold uppercase tracking-wider shrink-0">
+                INTAKE STATUS NOTICE
+              </span>
+              <p className="text-xs sm:text-sm font-sans font-medium text-[#002855] leading-relaxed">
+                Cohort 01 closed on 15 Sep 2026 and is currently presenting live at AICSSYC (Oct 08–11). Submissions received below are queued for Cohort 02 review.
+              </p>
+            </div>
+            <span className="mono text-[11px] text-[#9E2A2B] font-bold uppercase tracking-wider shrink-0 bg-[#FAF9F5] px-2.5 py-1 border border-[#E5E2DA]">
+              COHORT 02 ACTIVE INTAKE
+            </span>
+          </div>
+        </div>
 
         {/* 4 Process Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -1904,10 +1930,10 @@ function PitchProcessTimelineSection({ onOpenDossier }: { onOpenDossier: () => v
             <div className="mono text-xs font-bold text-[#9E2A2B] mb-2">STEP / 04</div>
             <h3 className="font-sans font-bold text-base text-[#002855] mb-3">OFFICIAL DATES</h3>
             <ul className="text-xs text-[#57534E] space-y-2 mono">
-              <li>• Applications open: Q2 · 2026</li>
-              <li>• Deadline: 15 Sep 2026</li>
-              <li>• Shortlist: 30 Sep 2026</li>
-              <li>• Pitch Day: AICSSYC 2026 (Oct 8–11)</li>
+              <li>• Cohort 01 Closed: 15 Sep 2026</li>
+              <li>• Demo Day: AICSSYC (Oct 8–11 Live)</li>
+              <li>• Cohort 02 Applications: Open Rolling</li>
+              <li>• Cohort 02 Review: Ongoing</li>
             </ul>
           </div>
         </div>
@@ -1916,15 +1942,15 @@ function PitchProcessTimelineSection({ onOpenDossier }: { onOpenDossier: () => v
         <div className="bg-[#002855] text-white p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-[0_8px_24px_rgba(0,40,85,0.15)] border border-[#001D40]">
           <div>
             <div className="mono text-xs text-[#9E2A2B] font-bold uppercase bg-white px-2 py-0.5 inline-block mb-1">
-              APPLICATIONS OPEN GLOBALLY · FREE TO APPLY
+              COHORT 02 ROLLING INTAKE · FREE TO APPLY
             </div>
-            <h4 className="font-serif text-xl sm:text-2xl text-white">Ready to pitch your startup?</h4>
+            <h4 className="font-serif text-xl sm:text-2xl text-white">Queue your venture for Cohort 02 review.</h4>
           </div>
           <button
             onClick={onOpenDossier}
             className="btn-tactile-crimson bg-[#9E2A2B] text-white hover:bg-[#852324] px-6 py-3.5 text-xs font-bold uppercase tracking-wider border border-[#9E2A2B] active:translate-y-0.5 transition-all whitespace-nowrap"
           >
-            Apply Now →
+            Apply for Cohort 02 →
           </button>
         </div>
 
@@ -2020,7 +2046,169 @@ function MentorsAdvisorsSection() {
   );
 }
 
-/* ================= 15. SECTION 12: INSTITUTIONAL PARTNERS ================= */
+/* ================= 15. SECTION 11: EVALUATION BENCHMARKS & SCORING MATRIX ================= */
+function EvaluationMatrixSection() {
+  const criteria = [
+    {
+      code: "CRIT / 01",
+      weight: "30%",
+      title: "Problem Depth",
+      tag: "POPULATION IMPACT & UNMET NEED",
+      desc: "Clarity of problem framing and validation that the solution addresses the 70–80% underserved global majority. Evaluates empirical customer discovery, severity of pain point, and structural urgency.",
+      metrics: [
+        "Underserved population focus (70–80% mandate)",
+        "Direct stakeholder field validation",
+        "Economic & societal leverage magnitude",
+      ],
+    },
+    {
+      code: "CRIT / 02",
+      weight: "25%",
+      title: "Technical Defensibility",
+      tag: "ENGINEERING NOVELTY & MOAT",
+      desc: "Novelty of IP, patentability, or proprietary deep-tech architecture across hardware, software, or hybrid layers. Assesses technical feasibility, architecture durability, and IEEE domain rigor.",
+      metrics: [
+        "Proprietary IP / algorithmic differentiation",
+        "Hardware-software integration robustness",
+        "IEEE domain engineering standard compliance",
+      ],
+    },
+    {
+      code: "CRIT / 03",
+      weight: "25%",
+      title: "Execution & Feasibility",
+      tag: "PROTOTYPE MATURITY & ROADMAP",
+      desc: "Current prototype maturity, speed of iteration, unit economics, and bill-of-materials (BOM) cost realism in low-resource environments alongside realistic 12-week deployment milestones.",
+      metrics: [
+        "Working prototype / tangible MVP evidence",
+        "Low-resource deployment economics & BOM",
+        "Deliverable 12-week milestone sprint plan",
+      ],
+    },
+    {
+      code: "CRIT / 04",
+      weight: "20%",
+      title: "Founder Commitment",
+      tag: "TEAM DYNAMICS & COACHABILITY",
+      desc: "Complementary technical domain expertise, coachability with venture mentors, long-term grit, and multidisciplinary alignment to scale the venture continuously past AICSSYC demo day.",
+      metrics: [
+        "Multidisciplinary technical capability",
+        "Mentor receptiveness & rapid execution",
+        "Full dedication to venture commercialization",
+      ],
+    },
+  ];
+
+  return (
+    <section id="evaluation" className="py-20 border-b border-[#E5E2DA] bg-[#FFFFFF]">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div>
+            <div className="mono text-xs font-bold text-[#9E2A2B] uppercase tracking-widest mb-2">
+              SECTION / 11 // EVALUATION BENCHMARKS & SCORING MATRIX
+            </div>
+            <h2 className="font-serif text-3xl sm:text-4xl text-[#002855] font-normal leading-tight">
+              Evaluation Benchmarks & Scoring Matrix
+            </h2>
+            <p className="mt-2 text-xs sm:text-sm text-[#57534E] max-w-2xl leading-relaxed">
+              Every applicant is assessed across four weighted vectors by our academic and venture review boards. A composite score of 80/100 or higher qualifies ventures for final live pitch selection.
+            </p>
+          </div>
+
+          <div className="border border-[#E5E2DA] bg-[#F9F8F5] p-4 flex items-center gap-6 shrink-0 shadow-sm">
+            <div>
+              <div className="mono text-[10px] text-[#57534E] uppercase font-bold">TOTAL SCORE MATRIX</div>
+              <div className="mono text-xl font-bold text-[#002855]">100% / 100 PTS</div>
+            </div>
+            <div className="h-8 w-px bg-[#E5E2DA]" />
+            <div>
+              <div className="mono text-[10px] text-[#9E2A2B] uppercase font-bold">SHORTLIST CUTOFF</div>
+              <div className="mono text-xl font-bold text-[#9E2A2B]">≥ 80.0 PTS</div>
+            </div>
+          </div>
+        </div>
+
+        {/* 4 Assessment Vector Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          {criteria.map((c, i) => (
+            <div
+              key={i}
+              className="bg-[#FAF9F5] border border-[#E5E2DA] p-6 flex flex-col justify-between hover:border-[#002855] transition-all shadow-[0_1px_3px_rgba(0,0,0,0.02)]"
+            >
+              <div>
+                <div className="flex items-center justify-between gap-2 mb-3 pb-3 border-b border-[#E5E2DA]">
+                  <span className="mono text-xs font-bold text-[#9E2A2B]">{c.code}</span>
+                  <span className="mono text-xs font-bold bg-[#002855] text-white px-2.5 py-0.5">
+                    {c.weight}
+                  </span>
+                </div>
+
+                <h3 className="font-serif text-xl text-[#002855] font-normal mb-1">{c.title}</h3>
+                <div className="mono text-[10px] font-bold text-[#57534E] uppercase tracking-wider mb-3">
+                  {c.tag}
+                </div>
+
+                <p className="text-xs text-[#57534E] leading-relaxed mb-6 font-sans">
+                  {c.desc}
+                </p>
+              </div>
+
+              <div>
+                <div className="mono text-[10px] font-bold text-[#002855] uppercase tracking-wider mb-2 border-t border-[#E5E2DA] pt-3">
+                  Assessment Benchmarks:
+                </div>
+                <ul className="space-y-1.5 mono text-[11px] text-[#57534E]">
+                  {c.metrics.map((m, idx) => (
+                    <li key={idx} className="flex items-start gap-1.5 leading-tight">
+                      <span className="text-[#9E2A2B] font-bold">✓</span>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Weight Allocation Progress Bar */}
+        <div className="bg-[#FAF9F5] border border-[#E5E2DA] p-6 shadow-sm">
+          <div className="flex items-center justify-between mono text-xs font-bold text-[#002855] mb-3">
+            <span>SCORING COMPOSITION LEDGER</span>
+            <span>WEIGHT DISTRIBUTION (100%)</span>
+          </div>
+          <div className="h-4 w-full bg-[#E5E2DA] flex overflow-hidden border border-[#E5E2DA]">
+            <div className="bg-[#002855] h-full text-[9px] text-white mono font-bold flex items-center justify-center" style={{ width: '30%' }}>30%</div>
+            <div className="bg-[#003B7A] h-full text-[9px] text-white mono font-bold flex items-center justify-center border-l border-white/20" style={{ width: '25%' }}>25%</div>
+            <div className="bg-[#9E2A2B] h-full text-[9px] text-white mono font-bold flex items-center justify-center border-l border-white/20" style={{ width: '25%' }}>25%</div>
+            <div className="bg-[#BF3A3C] h-full text-[9px] text-white mono font-bold flex items-center justify-center border-l border-white/20" style={{ width: '20%' }}>20%</div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3 mono text-[10px] text-[#57534E]">
+            <div className="flex items-center gap-1.5">
+              <span className="h-2.5 w-2.5 bg-[#002855] inline-block" />
+              <span>Problem Depth (30%)</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="h-2.5 w-2.5 bg-[#003B7A] inline-block" />
+              <span>Technical Defensibility (25%)</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="h-2.5 w-2.5 bg-[#9E2A2B] inline-block" />
+              <span>Execution & Feasibility (25%)</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="h-2.5 w-2.5 bg-[#BF3A3C] inline-block" />
+              <span>Founder Commitment (20%)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+/* ================= 16. SECTION 12: INSTITUTIONAL PARTNERS ================= */
 function VenturePartnersSection() {
   const partners = [
     "IEEE·CS",
@@ -2031,7 +2219,7 @@ function VenturePartnersSection() {
   ];
 
   return (
-    <section id="partners" className="py-16 border-b border-[#E5E2DA] bg-[#FFFFFF]">
+    <section id="partners" className="py-16 border-b border-[#E5E2DA] bg-[#F9F8F5]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="mono text-xs font-bold text-[#57534E] uppercase tracking-widest text-center mb-8">
           SECTION / 12 // INSTITUTIONAL & CAPITAL PARTNERS
@@ -2041,12 +2229,130 @@ function VenturePartnersSection() {
           {partners.map((p, idx) => (
             <div
               key={idx}
-              className="p-5 border border-[#E5E2DA] bg-[#F9F8F5] text-center font-bold text-xs sm:text-sm tracking-wider text-[#002855] mono flex items-center justify-center min-h-[70px] shadow-[0_1px_2px_rgba(0,0,0,0.02)]"
+              className="p-5 border border-[#E5E2DA] bg-[#FFFFFF] text-center font-bold text-xs sm:text-sm tracking-wider text-[#002855] mono flex items-center justify-center min-h-[70px] shadow-[0_1px_2px_rgba(0,0,0,0.02)]"
             >
               {p}
             </div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* ================= 17. SECTION 13: GOVERNANCE & FOUNDER IP CHARTER ================= */
+function GovernanceCharterSection() {
+  const charterClauses = [
+    {
+      icon: ShieldCheck,
+      badge: "0% EQUITY DILUTION",
+      title: "Zero Equity & Zero Governance Warrants",
+      desc: "GIC operates as an institutional philanthropic incubator under IEEE Computer Society. We take 0% equity, 0% SAFE notes, 0% warrant rights, and zero governance board seats. The cap table remains 100% under founder sovereignty.",
+    },
+    {
+      icon: FileCheck,
+      badge: "100% FOUNDER IP",
+      title: "100% Founder-Retained Intellectual Property",
+      desc: "Founders, student creators, and researchers retain 100% unconditional ownership of all source code, patents, CAD schematics, and algorithms. No co-licensing, assignment covenants, or exclusivity restrictions are ever imposed.",
+    },
+    {
+      icon: Coins,
+      badge: "NON-DILUTIVE GRANTS",
+      title: "Milestone-Based Grant Disbursement",
+      desc: "Prize capital up to ₹2,00,000 / $2,500 and travel stipends are awarded as pure non-dilutive grants. Capital is disbursed directly against verified technical milestones with zero clawback clauses or debt conversion terms.",
+    },
+    {
+      icon: Award,
+      badge: "INSTITUTIONAL INTEGRITY",
+      title: "IEEE Code of Ethics & Unbiased Audit",
+      desc: "All jury assessments, mentor introductions, and corporate partnerships are governed by the IEEE Code of Ethics and AICSSYC steering committee protocols, ensuring meritocratic, unbiased review without commercial conflicts of interest.",
+    },
+  ];
+
+  return (
+    <section id="governance" className="py-20 border-b border-[#E5E2DA] bg-[#FFFFFF]">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        
+        <div className="mono text-xs font-bold text-[#9E2A2B] uppercase tracking-widest mb-2">
+          SECTION / 13 // GOVERNANCE & FOUNDER IP CHARTER
+        </div>
+        <h2 className="font-serif text-3xl sm:text-4xl text-[#002855] font-normal mb-4">
+          Governance & Founder IP Charter
+        </h2>
+        <p className="text-xs sm:text-sm text-[#57534E] max-w-3xl mb-12 leading-relaxed">
+          The IEEE Computer Society Global Incubation Committee operates under a strict founder-first charter designed to foster ethical engineering without predatory venture terms.
+        </p>
+
+        {/* 4 Charter Pillars */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          {charterClauses.map((clause, idx) => {
+            const Icon = clause.icon;
+            return (
+              <div
+                key={idx}
+                className="bg-[#FAF9F5] border border-[#E5E2DA] p-6 sm:p-8 flex flex-col justify-between shadow-[0_1px_3px_rgba(0,0,0,0.02)] relative overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 w-24 h-24 bg-[#002855]/[0.02] rounded-bl-full pointer-events-none" />
+                <div>
+                  <div className="flex items-center justify-between gap-3 mb-4">
+                    <div className="h-10 w-10 bg-[#002855] text-white flex items-center justify-center shrink-0">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <span className="mono text-[10px] font-bold text-[#9E2A2B] bg-[#FFFFFF] border border-[#E5E2DA] px-2.5 py-1 uppercase">
+                      {clause.badge}
+                    </span>
+                  </div>
+
+                  <h3 className="font-serif text-2xl text-[#002855] font-normal mb-3">
+                    {clause.title}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-[#57534E] leading-relaxed font-sans">
+                    {clause.desc}
+                  </p>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-[#E5E2DA] mono text-[11px] text-[#002855] font-semibold flex items-center justify-between">
+                  <span>CHARTER ARTICLE 13.0{idx + 1}</span>
+                  <span className="text-[#9E2A2B]">RATIFIED 2026</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Formal Institutional Covenant Box */}
+        <div className="bg-[#FAF9F5] border-2 border-[#002855] p-8 sm:p-10 relative shadow-[0_4px_16px_rgba(0,40,85,0.06)]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-8">
+              <div className="mono text-[10px] font-bold text-[#9E2A2B] uppercase tracking-widest mb-2">
+                // INSTITUTIONAL COVENANT
+              </div>
+              <h3 className="font-serif text-2xl sm:text-3xl text-[#002855] mb-3 font-normal">
+                Our Non-Dilutive Pledge to Engineering Founders
+              </h3>
+              <p className="text-xs sm:text-sm text-[#57534E] leading-relaxed">
+                "We believe foundational breakthrough innovations addressing the world's most difficult problems should not be constrained by short-term predatory dilution. GIC exists solely to empower founders with grant capital, elite IEEE technical networks, and institutional credibility."
+              </p>
+              <div className="mt-4 flex flex-wrap items-center gap-4 mono text-[11px] text-[#002855] font-bold">
+                <span>• 0% EQUITY GUARANTEE</span>
+                <span>• 100% IP RETENTION</span>
+                <span>• NON-DILUTIVE DISBURSEMENTS</span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-4 flex flex-col items-center justify-center p-6 bg-[#FFFFFF] border border-[#E5E2DA] text-center">
+              <InstitutionalAccreditationSeal size="md" />
+              <div className="mono text-[10px] text-[#002855] font-bold mt-3">
+                IEEE COMPUTER SOCIETY
+              </div>
+              <div className="mono text-[9px] text-[#57534E]">
+                SECRETARIAT CHARTER № 2026-GIC
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
@@ -2283,48 +2589,78 @@ function Footer({ scrollToSection }: { scrollToSection: (id: string) => void }) 
               <li><button onClick={() => scrollToSection("tracks")} className="hover:underline">Tracks</button></li>
               <li><button onClick={() => scrollToSection("tiers")} className="hover:underline">Tiers & Calculator</button></li>
               <li><button onClick={() => scrollToSection("sprint")} className="hover:underline">12-Week Sprint</button></li>
-              <li><button onClick={() => scrollToSection("about")} className="hover:underline">About</button></li>
+              <li><button onClick={() => scrollToSection("about")} className="hover:underline">About & Dual Gaps</button></li>
               <li><button onClick={() => scrollToSection("principles")} className="hover:underline">Principles</button></li>
               <li><button onClick={() => scrollToSection("journey")} className="hover:underline">Journey</button></li>
               <li><button onClick={() => scrollToSection("offerings")} className="hover:underline">Offerings</button></li>
             </ul>
           </div>
 
-          {/* PROGRAM */}
+          {/* PROGRAMME & BENCHMARKS */}
           <div>
             <div className="mono font-bold text-white uppercase mb-3">PROGRAMME</div>
             <ul className="space-y-2 text-xs">
-              <li><button onClick={() => scrollToSection("dossier")} className="hover:underline">Apply</button></li>
-              <li><button onClick={() => scrollToSection("mentors")} className="hover:underline">Mentors</button></li>
-              <li><button onClick={() => scrollToSection("partners")} className="hover:underline">Partners</button></li>
-              <li><button onClick={() => scrollToSection("benefits")} className="hover:underline">Success Stories</button></li>
+              <li><button onClick={() => scrollToSection("dossier")} className="hover:underline">Apply / Intake Dossier</button></li>
+              <li><button onClick={() => scrollToSection("pitch-process")} className="hover:underline">Pitch Process (Sec 08)</button></li>
+              <li><button onClick={() => scrollToSection("evaluation")} className="hover:underline">Scoring Matrix (Sec 11)</button></li>
+              <li><button onClick={() => scrollToSection("governance")} className="hover:underline">Governance Charter (Sec 13)</button></li>
+              <li><button onClick={() => scrollToSection("mentors")} className="hover:underline">Mentors & Advisors</button></li>
+              <li><button onClick={() => scrollToSection("partners")} className="hover:underline">Institutional Partners</button></li>
+              <li><button onClick={() => scrollToSection("faq")} className="hover:underline">Programme FAQ</button></li>
             </ul>
           </div>
 
-          {/* COMPANY & LEGAL */}
+          {/* INSTITUTIONAL GOVERNANCE */}
           <div>
-            <div className="mono font-bold text-white uppercase mb-3">COMPANY & LEGAL</div>
-            <div className="space-y-1.5 text-xs text-[#E5E2DA]/80">
-              <div>Contact: <a href="mailto:gic@aicssyc2026.org" className="underline">gic@aicssyc2026.org</a></div>
-              <div><a href="https://computer.org" target="_blank" rel="noreferrer" className="hover:underline flex items-center gap-1">IEEE.org <ExternalLink className="h-3 w-3" /></a></div>
-              <div>Privacy Policy & Terms</div>
-              <div>Code of Conduct</div>
+            <div className="mono font-bold text-white uppercase mb-3">INSTITUTIONAL GOVERNANCE</div>
+            <div className="space-y-2 text-xs text-[#E5E2DA]/90">
+              <div>
+                <button onClick={() => scrollToSection("governance")} className="hover:underline text-left flex items-center gap-1.5 text-white">
+                  <Shield className="h-3 w-3 text-[#9E2A2B]" />
+                  <span>IP & Governance Protocol</span>
+                </button>
+              </div>
+              <div>
+                <a href="https://www.ieee.org/security-privacy.html" target="_blank" rel="noreferrer" className="hover:underline flex items-center gap-1.5">
+                  <span>IEEE Privacy Policy</span>
+                  <ExternalLink className="h-3 w-3 text-[#E5E2DA]/60" />
+                </a>
+              </div>
+              <div>
+                <a href="https://www.ieee.org/about/corporate/governance/p7-8.html" target="_blank" rel="noreferrer" className="hover:underline flex items-center gap-1.5">
+                  <span>IEEE Code of Ethics</span>
+                  <ExternalLink className="h-3 w-3 text-[#E5E2DA]/60" />
+                </a>
+              </div>
+              <div>
+                <a href="mailto:gic@aicssyc2026.org" className="hover:underline flex items-center gap-1.5 text-[#E5E2DA]">
+                  <Mail className="h-3 w-3 text-[#9E2A2B]" />
+                  <span>Secretariat Desk: gic@aicssyc2026.org</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Utility Bar */}
-        <div className="pt-6 border-t border-[#001D40] flex flex-col sm:flex-row items-center justify-between gap-4 mono text-[11px] text-[#E5E2DA]/70">
+        <div className="pt-6 border-t border-[#001D40] flex flex-col sm:flex-row items-center justify-between gap-4 mono text-[11px] text-[#E5E2DA]/80">
           <div>© 2026 GIC · IEEE COMPUTER SOCIETY. ALL RIGHTS RESERVED.</div>
-          <div className="flex items-center gap-4">
-            <span className="hover:underline cursor-pointer">PRIVACY</span>
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+            <button onClick={() => scrollToSection("governance")} className="hover:underline text-[#FAF9F5] font-semibold">
+              IP & GOVERNANCE PROTOCOL
+            </button>
             <span>•</span>
-            <span className="hover:underline cursor-pointer">TERMS</span>
+            <a href="https://www.ieee.org/security-privacy.html" target="_blank" rel="noreferrer" className="hover:underline">
+              IEEE PRIVACY POLICY
+            </a>
             <span>•</span>
-            <span className="hover:underline cursor-pointer">CODE OF CONDUCT</span>
+            <a href="https://www.ieee.org/about/corporate/governance/p7-8.html" target="_blank" rel="noreferrer" className="hover:underline">
+              IEEE CODE OF ETHICS
+            </a>
             <span>•</span>
-            <span className="bg-white text-[#002855] px-1.5 py-0.5 font-bold text-[10px]">ROBOTS.TXT</span>
-            <span className="bg-white text-[#002855] px-1.5 py-0.5 font-bold text-[10px]">LLMS.TXT</span>
+            <a href="mailto:gic@aicssyc2026.org" className="hover:underline text-[#FAF9F5] font-semibold">
+              SECRETARIAT DESK
+            </a>
           </div>
         </div>
       </div>
